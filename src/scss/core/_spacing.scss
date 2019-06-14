@@ -1,0 +1,61 @@
+// generate the utility classes for properties Margin and Padding 
+//
+// with a numeric value
+//
+@each $propertyName, $abbrev in $properties {
+  @each $key, $value in $spacers {
+    .#{$abbrev}-#{$key} {
+      #{$propertyName}: $value !important;
+    }
+
+    .#{$abbrev}t-#{$key},
+    .#{$abbrev}y-#{$key} {
+      #{$propertyName}-top: $value !important;
+    }
+
+    .#{$abbrev}r-#{$key},
+    .#{$abbrev}x-#{$key} {
+      #{$propertyName}-right: $value !important;
+    }
+
+    .#{$abbrev}b-#{$key},
+    .#{$abbrev}y-#{$key} {
+      #{$propertyName}-bottom: $value !important;
+    }
+
+    .#{$abbrev}l-#{$key},
+    .#{$abbrev}x-#{$key} {
+      #{$propertyName}-left: $value !important;
+    }
+  }
+}
+
+// with a value 'auto'
+//
+@each $propertyName, $abbrev in $properties {
+  $auto: auto !important;
+
+  @if $propertyName == "margin" {
+    .#{$abbrev}-auto { #{$propertyName}: $auto; }
+
+    .#{$abbrev}t-auto,
+    .#{$abbrev}y-auto {
+      #{$propertyName}-top: $auto;
+    }
+
+    .#{$abbrev}r-auto,
+    .#{$abbrev}x-auto {
+      #{$propertyName}-right: $auto;
+    }
+
+    .#{$abbrev}b-auto,
+    .#{$abbrev}y-auto {
+      #{$propertyName}-bottom: $auto;
+    }
+
+    .#{$abbrev}l-auto,
+    .#{$abbrev}x-auto {
+      #{$propertyName}-left: $auto;
+    }
+  }
+}

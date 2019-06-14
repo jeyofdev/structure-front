@@ -1,0 +1,12 @@
+// css properties
+//
+// list the css properties used in generic classes
+//
+$properties: () !default;
+$properties: map-merge(
+  (
+    "margin": "m",
+    "padding": "p"
+  ),
+  $properties
+);

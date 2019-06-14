@@ -1,4 +1,6 @@
-// generate utility classes for text & background colors
+// generate utility classes for properties color & background-color
+//
+// with shades of colors
 //
 @each $key, $value in $colors {
   .text-#{$key} {
@@ -10,7 +12,7 @@
   }
 }
 
-// generate utility classes for text & background grays
+// with shades of gray
 //
 @each $key, $value in $grays {
   .text-gray-#{$key} {
