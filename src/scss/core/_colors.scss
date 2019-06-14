@@ -1,0 +1,23 @@
+// generate utility classes for text & background colors
+//
+@each $key, $value in $colors {
+  .text-#{$key} {
+    color: $value !important;
+  }
+
+  .bg-#{$key} {
+    background-color: $value !important;
+  }
+}
+
+// generate utility classes for text & background grays
+//
+@each $key, $value in $grays {
+  .text-gray-#{$key} {
+    color: $value !important;
+  }
+
+  .bg-gray-#{$key} {
+    background-color: $value !important;
+  }
+}
