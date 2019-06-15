@@ -1,0 +1,12 @@
+// visibility
+//
+// list the visibilities used in generic classes
+//
+$visibilities: () !default;
+$visibilities: map-merge(
+  (
+    "visible":   visible,
+    "hidden":    hidden
+  ),
+  $visibilities
+);
