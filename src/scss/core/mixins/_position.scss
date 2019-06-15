@@ -1,0 +1,20 @@
+/// set the position an element in a fixed position top or bottom
+///
+/// @param $className {string} name of the generated class
+/// @param $top {boolean} enable top property
+/// @param $bottom {boolean} enable bottom property
+@mixin positionFixed ($className, $top: false, $bottom: false) {
+  .fixed-#{$className} {
+    position: fixed;
+    right: 0;
+    left: 0;
+
+    @if $top {
+      top: 0;
+    }
+
+    @if $bottom {
+      bottom: 0;
+    }
+  }
+}

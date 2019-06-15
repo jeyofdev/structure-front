@@ -1,4 +1,4 @@
-// generate the utility classes for properties Position
+// generate the utility classes for property Position
 //
 @each $key, $value in $positions {
   .pos-#{$key} {

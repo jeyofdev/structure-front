@@ -1,35 +1,5 @@
-/// position an element in a fixed position top or bottom
-///
-/// @param $className {string} name of the generated class
-/// @param $top {boolean} enable top property
-/// @param $bottom {boolean} enable bottom property
-@mixin positionFixed ($className, $top: false, $bottom: false) {
-  .fixed-#{$className} {
-    position: fixed;
-    right: 0;
-    left: 0;
-
-    @if $top {
-      top: 0;
-    }
-
-    @if $bottom {
-      bottom: 0;
-    }
-  }
-}
-
-/// set the units in vh or vw
-///
-/// @param $className {string} name of the generated class
-/// @param $property {string} property name css (width or height)
-/// @param $viewport {string} unit(width, height, min-width or min-height)
-@mixin viewport ($className, $property, $viewport) {
-  @if $viewport == "width" or $viewport == "min-width" {
-    .#{$className}-100 { #{$property}: 100vw !important; }
-  }
-
-  @else if $viewport == "height" or $viewport == "min-height" {
-    .#{$className}-100 { #{$property}: 100vh !important; }
-  }
-}
+// mixins
+//
+@import "mixins/position";
+@import "mixins/sizes";
+@import "mixins/borders";

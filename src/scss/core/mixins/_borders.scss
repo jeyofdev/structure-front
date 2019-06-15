@@ -1,0 +1,28 @@
+/// set the border of an element
+///
+/// @param $className {string} name of the generated class
+/// @param $border {boolean} display or not the border of the element
+@mixin border ($className, $border: true) {
+  $property: $className;
+
+  @if ($border) {
+    .#{$className} { #{$property}: $border-width solid $border-color !important; }
+  }
+
+  @else {
+    .#{$className}-none { #{$property}: none !important; }
+  }
+}
+
+/// set the border-radius of an element
+///
+/// @param $className {string} name of the generated class
+/// @param $properties {array} list of css properties to generate
+/// @param $value unique value of each property
+@mixin borderRadius ($className, $properties: (), $value: $border-radius) {
+  .#{$className} {
+    @each $key in $properties {
+      #{$key}-radius: #{$value} !important;
+    }
+  }
+}
