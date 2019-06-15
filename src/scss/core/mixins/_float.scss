@@ -5,3 +5,13 @@
 @mixin float ($className, $value) {
   .float-#{$className} { float: #{$value} !important; }
 }
+
+/// clear a float by adding .clearfix to the parent element
+///
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

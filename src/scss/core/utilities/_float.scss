@@ -3,3 +3,9 @@
 @include float ("left", "left");
 @include float ("right", "right");
 @include float ("none", "none");
+
+// generate the clearfix utility class to clear a Float 
+//
+.clearfix {
+  @include clearfix();
+}

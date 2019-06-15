@@ -1,0 +1,14 @@
+// overflow
+//
+// list the overflow used in generic classes
+//
+$overflows: () !default;
+$overflows: map-merge(
+  (
+    "auto":      auto,
+    "hidden":    hidden,
+    "scroll":    scroll,
+    "visible":   visible
+  ),
+  $overflows
+);
