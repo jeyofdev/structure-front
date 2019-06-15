@@ -1,0 +1,5 @@
+// generate the utility classes for property Display
+//
+@each $key, $value in $displays {
+  .d-#{$key} { display: $value !important; }
+}
