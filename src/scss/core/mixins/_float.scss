@@ -1,0 +1,7 @@
+/// align an element with the float property
+///
+/// @param $className {string} name of the generated class
+/// @param $top {string} value of the float property
+@mixin float ($className, $value) {
+  .float-#{$className} { float: #{$value} !important; }
+}
