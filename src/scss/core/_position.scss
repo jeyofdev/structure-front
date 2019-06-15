@@ -1,0 +1,12 @@
+// generate the utility classes for properties Position
+//
+@each $key, $value in $positions {
+  .pos-#{$key} {
+    position: $value !important;
+  }
+}
+
+// for fixed position top or bottom
+//
+@include positionFixed("top", true);
+@include positionFixed("bottom", false, true);

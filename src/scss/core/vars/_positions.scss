@@ -1,0 +1,14 @@
+// position
+//
+// list the position used in generic classes
+//
+$positions: () !default;
+$positions: map-merge(
+  (
+    "s":   static,
+    "r":   relative,
+    "a":   absolute,
+    "f":   fixed
+  ),
+  $positions
+);
