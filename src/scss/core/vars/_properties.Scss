@@ -6,7 +6,9 @@ $properties: () !default;
 $properties: map-merge(
   (
     "margin": "m",
-    "padding": "p"
+    "padding": "p",
+    "width": "w",
+    "height": "h"
   ),
   $properties
 );

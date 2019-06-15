@@ -1,0 +1,21 @@
+// generate the utility classes for properties Width and Height
+//
+@each $propertyName, $abbrev in $properties {
+  @if ($propertyName == "width") or ($propertyName == "height") {
+    @each $key, $value in $units {
+      .#{$abbrev}-#{$key} { #{$propertyName}: $value !important; }
+    }
+  }
+}
+
+// generate the utility classes for properties Max-width and Max-Height
+//
+.mw-100 { max-width: 100% !important; }
+.mh-100 { max-height: 100% !important; }
+
+// generate the utility classes for viewport additional helpers
+//
+@include viewport("vw", "width", width);
+@include viewport("vh", "height", height);
+@include viewport("min-vw", "min-width", width);
+@include viewport("min-vh", "min-height", height);

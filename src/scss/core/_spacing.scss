@@ -3,29 +3,31 @@
 // with a numeric value
 //
 @each $propertyName, $abbrev in $properties {
-  @each $key, $value in $spacers {
-    .#{$abbrev}-#{$key} {
-      #{$propertyName}: $value !important;
-    }
+  @if ($propertyName == "margin") or ($propertyName == "padding") {
+    @each $key, $value in $spacers {
+      .#{$abbrev}-#{$key} {
+        #{$propertyName}: $value !important;
+      }
 
-    .#{$abbrev}t-#{$key},
-    .#{$abbrev}y-#{$key} {
-      #{$propertyName}-top: $value !important;
-    }
+      .#{$abbrev}t-#{$key},
+      .#{$abbrev}y-#{$key} {
+        #{$propertyName}-top: $value !important;
+      }
 
-    .#{$abbrev}r-#{$key},
-    .#{$abbrev}x-#{$key} {
-      #{$propertyName}-right: $value !important;
-    }
+      .#{$abbrev}r-#{$key},
+      .#{$abbrev}x-#{$key} {
+        #{$propertyName}-right: $value !important;
+      }
 
-    .#{$abbrev}b-#{$key},
-    .#{$abbrev}y-#{$key} {
-      #{$propertyName}-bottom: $value !important;
-    }
+      .#{$abbrev}b-#{$key},
+      .#{$abbrev}y-#{$key} {
+        #{$propertyName}-bottom: $value !important;
+      }
 
-    .#{$abbrev}l-#{$key},
-    .#{$abbrev}x-#{$key} {
-      #{$propertyName}-left: $value !important;
+      .#{$abbrev}l-#{$key},
+      .#{$abbrev}x-#{$key} {
+        #{$propertyName}-left: $value !important;
+      }
     }
   }
 }
