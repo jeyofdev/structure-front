@@ -1,0 +1,6 @@
+// generate the utility classes for box-shadow property
+//
+@include shadow("shadow", $box-shadow);
+@include shadow("shadow-sm", $box-shadow-sm);
+@include shadow("shadow-lg", $box-shadow-lg);
+@include shadow("shadow-none", none);

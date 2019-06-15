@@ -1,0 +1,7 @@
+/// set the shadow to an element
+///
+/// @param $className {string} name of the generated class
+/// @param $top value of the css box-shadow property
+@mixin shadow ($className, $value) {
+  .#{$className} { box-shadow: $value !important; }
+}
