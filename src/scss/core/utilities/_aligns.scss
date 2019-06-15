@@ -1,0 +1,5 @@
+// generate the utility classes for property Vertical-align
+//
+@each $key, $value in $aligns {
+  .align-#{$key} { vertical-align: $value !important; }
+}

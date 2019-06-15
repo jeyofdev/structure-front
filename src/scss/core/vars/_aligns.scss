@@ -1,0 +1,16 @@
+// vertical-align
+//
+// list the vertical-align used in generic classes
+//
+$aligns: () !default;
+$aligns: map-merge(
+  (
+    "baseline":      baseline,
+    "top":           top,
+    "middle":        middle,
+    "bottom":        bottom,
+    "text-bottom":   text-bottom,
+    "text-top":      text-top
+  ),
+  $aligns
+);
