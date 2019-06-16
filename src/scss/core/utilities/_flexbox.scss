@@ -1,0 +1,61 @@
+// generate the utility classes for flex-direction
+//
+@include flexDirection();
+@include flexDirection("row-reverse", "row-reverse");
+@include flexDirection("column", "column");
+@include flexDirection("column-reverse", "column-reverse");
+
+// generate the utility classes for flex-wrap
+//
+@include flexWrap();
+@include flexWrap("wrap", "wrap");
+@include flexWrap("wrap-reverse", "wrap-reverse");
+
+// generate the utility classes for justify-content
+//
+@include flexJustifyContent();
+@include flexJustifyContent("end", "flex-end");
+@include flexJustifyContent("center", "center");
+@include flexJustifyContent("between", "space-between");
+@include flexJustifyContent("around", "space-around");
+@include flexJustifyContent("evenly", "space-evenly");
+
+// generate the utility classes for align-items
+//
+@include flexAlignItems();
+@include flexAlignItems("end", "flex-end");
+@include flexAlignItems("center", "center");
+@include flexAlignItems("stretch", "stretch");
+@include flexAlignItems("baseline", "baseline");
+
+// generate the utility classes for align-content
+//
+@include flexAlignContent();
+@include flexAlignContent("end", "flex-end");
+@include flexAlignContent("center", "center");
+@include flexAlignContent("stretch", "stretch");
+@include flexAlignContent("between", "space-between");
+@include flexAlignContent("around", "space-around");
+
+// generate the utility classes for align-self
+//
+@include flexAlignSelf();
+@include flexAlignSelf("start", "flex-start");
+@include flexAlignSelf("end", "flex-end");
+@include flexAlignSelf("center", "center");
+@include flexAlignSelf("stretch", "stretch");
+@include flexAlignSelf("baseline", "baseline");
+
+// generate the utility classes for flex-grow
+//
+@include flexGrow();
+@include flexGrow("1", 1);
+
+// generate the utility classes for flex-shrink
+//
+@include flexShrink();
+@include flexShrink("1", 1);
+
+// generate the utility classes for flex
+//
+.flex-fill { flex: 1 1 auto !important; }

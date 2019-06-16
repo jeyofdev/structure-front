@@ -1,0 +1,63 @@
+/// set the flex-direction property
+///
+/// @param $className {string} name of the generated class
+/// @param $border {string} value of the flex-direction property
+@mixin flexDirection ($className: "row", $value: "row") {
+  .flex-#{$className} { flex-direction: #{$value} !important; }
+}
+
+/// set the flex-wrap property
+///
+/// @param $className {string} name of the generated class
+/// @param $border {string} value of the flex-wrap property
+@mixin flexWrap ($className: "nowrap", $value: "nowrap") {
+  .flex-#{$className} { flex-wrap: #{$value} !important; }
+}
+
+/// set the justify-content property
+///
+/// @param $className {string} name of the generated class
+/// @param $border {string} value of the justify-content property
+@mixin flexJustifyContent ($className: "start", $value: "flex-start") {
+  .flex-justify-content-#{$className} { justify-content: #{$value} !important; }
+}
+
+/// set the align-items property
+///
+/// @param $className {string} name of the generated class
+/// @param $border {string} value of the align-items property
+@mixin flexAlignItems ($className: "start", $value: "flex-start") {
+  .flex-align-items-#{$className} { align-items: #{$value} !important; }
+}
+
+/// set the align-content property
+///
+/// @param $className {string} name of the generated class
+/// @param $border {string} value of the align-content property
+@mixin flexAlignContent ($className: "start", $value: "flex-start") {
+  .flex-align-content-#{$className} { align-content: #{$value} !important; }
+}
+
+/// set the align-self property
+///
+/// @param $className {string} name of the generated class
+/// @param $border {string} value of the align-self property
+@mixin flexAlignSelf ($className: "auto", $value: "auto") {
+  .flex-align-self-#{$className} { align-self: #{$value} !important; }
+}
+
+/// set the flex-grow property
+///
+/// @param $className {string} name of the generated class
+/// @param $border {number} value of the flex-grow property
+@mixin flexGrow ($className: "0", $value: 0) {
+  .flex-grow-#{$className} { flex-grow: $value !important; }
+}
+
+/// set the flex-shrink property
+///
+/// @param $className {string} name of the generated class
+/// @param $border {number} value of the flex-shrink property
+@mixin flexShrink ($className: "0", $value: 0) {
+  .flex-shrink-#{$className} { flex-shrink: $value !important; }
+}
