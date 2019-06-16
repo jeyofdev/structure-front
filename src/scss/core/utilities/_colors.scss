@@ -23,3 +23,16 @@
     background-color: $value !important;
   }
 }
+
+// with contextual colors
+//
+@each $key, $value in $textColors {
+  .text-#{$key} {
+    color: $value !important;
+  }
+}
+
+// reset color
+//
+@include textReset();
+

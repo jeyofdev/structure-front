@@ -1,0 +1,89 @@
+// text
+//
+// list the font-weight used in generic classes
+//
+$fontWeight: () !default;
+$fontWeight: map-merge(
+  (
+    "normal":    $font-weight-normal,
+    "light":     $font-weight-light,
+    "lighter":   $font-weight-lighter,
+    "bold":      $font-weight-bold,
+    "bolder":    $font-weight-bolder
+  ),
+  $fontWeight
+);
+
+// list the font-style used in generic classes
+//
+$fontStyles: () !default;
+$fontStyles: map-merge(
+  (
+    "normal":    normal,
+    "italic":    italic
+  ),
+  $fontStyles
+);
+
+// list the white-space used in generic classes
+//
+$whiteSpaces: () !default;
+$whiteSpaces: map-merge(
+  (
+    "normal":     normal,
+    "nowrap":     nowrap,
+    "pre":        pre
+  ),
+  $whiteSpaces
+);
+
+// list the text-align used in generic classes
+//
+$textAligns: () !default;
+$textAligns: map-merge(
+  (
+    "left":      left,
+    "right":     right,
+    "center":    center,
+    "justify":   justify
+  ),
+  $textAligns
+);
+
+// list the text-transform used in generic classes
+//
+$textTransform: () !default;
+$textTransform: map-merge(
+  (
+    "none":        none,
+    "lowercase":   lowercase,
+    "uppercase":   uppercase,
+    "capitalize":  capitalize
+  ),
+  $textTransform
+);
+
+// list the text-decoration used in generic classes
+//
+$textDecorations: () !default;
+$textDecorations: map-merge(
+  (
+    "none":       none,
+    "underline":  underline
+  ),
+  $textDecorations
+);
+
+// list the contextual colors used in generic classes
+//
+$textColors: () !default;
+$textColors: map-merge(
+  (
+    "body":      $body-color,
+    "muted":     $text-muted,
+    "black-50":  rgba($black, .5),
+    "white-50":  rgba($white, .5)
+  ),
+  $textColors
+);
+

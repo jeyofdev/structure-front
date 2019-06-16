@@ -1,0 +1,39 @@
+// generate the utility classes for property font-weight
+//
+@each $key, $value in $fontWeight {
+  .font-weight-#{$key} { font-weight: $value !important; }
+}
+
+// generate the utility classes for property font-style
+//
+@each $key, $value in $fontStyles {
+  .font-style-#{$key} { font-style: $value !important; }
+}
+
+// generate the utility classes for property white-space
+//
+@each $key, $value in $whiteSpaces {
+  .text-#{$key} { white-space: $value !important; }
+}
+
+// generate the utility classes for property text-align
+//
+@each $key, $value in $textAligns {
+  .text-#{$key} { text-align: $value !important; }
+}
+
+// generate the utility classes for property text-transform
+//
+@each $key, $value in $textTransform {
+  .text-#{$key} { text-transform: $value !important; }
+}
+
+// generate the utility classes for property text-decoration
+//
+@each $key, $value in $textDecorations {
+  .text-decoration-#{$key} { text-decoration: $value !important; }
+}
+
+// generate the utility classes for word break
+//
+@include textBreak();
