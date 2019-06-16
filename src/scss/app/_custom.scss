@@ -7,6 +7,8 @@ h3 {
 }
 
 div {
+  @include flexCustom(null, null, center, center);
+
   background: lighten($blue, 20);
   width: 100%;
   height: 100px;
