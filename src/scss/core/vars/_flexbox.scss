@@ -1,0 +1,107 @@
+// flexbox
+//
+// list the flex-direction used in generic classes
+//
+$flexDirections: () !default;
+$flexDirections: map-merge(
+  (
+    "row":             row,
+    "row-reverse":     row-reverse,
+    "column":          column,
+    "column-reverse":  column-reverse
+  ),
+  $flexDirections
+);
+
+// list the flex-wrap used in generic classes
+//
+$flexWraps: () !default;
+$flexWraps: map-merge(
+  (
+    "nowrap":          nowrap,
+    "wrap":            wrap,
+    "wrap-reverse":    wrap-reverse
+  ),
+  $flexWraps
+);
+
+// list the justify-content used in generic classes
+//
+$justifyContent: () !default;
+$justifyContent: map-merge(
+  (
+    "flex-start":      flex-start,
+    "flex-end":        flex-end,
+    "center":          center,
+    "space-between":   space-between,
+    "space-around":    space-around,
+    "space-evenly":    space-evenly
+  ),
+  $justifyContent
+);
+
+// list the align-items used in generic classes
+//
+$alignItems: () !default;
+$alignItems: map-merge(
+  (
+    "flex-start":      flex-start,
+    "flex-end":        flex-end,
+    "center":          center,
+    "stretch":         stretch,
+    "baseline":        baseline
+  ),
+  $alignItems
+);
+
+// list the align-content used in generic classes
+//
+$alignContent: () !default;
+$alignContent: map-merge(
+  (
+    "flex-start":      flex-start,
+    "flex-end":        flex-end,
+    "center":          center,
+    "stretch":         stretch,
+    "space-between":   space-between,
+    "space-around":    space-around,
+  ),
+  $alignContent
+);
+
+// list the align-self used in generic classes
+//
+$alignSelf: () !default;
+$alignSelf: map-merge(
+  (
+    "auto":            auto,
+    "flex-start":      flex-start,
+    "flex-end":        flex-end,
+    "center":          center,
+    "stretch":         stretch,
+    "baseline":        baseline
+  ),
+  $alignSelf
+);
+
+// list the flex-grow used in generic classes
+//
+$flexGrow: () !default;
+$flexGrow: map-merge(
+  (
+    0:    0,
+    1:    1
+  ),
+  $flexGrow
+);
+
+// list the flex-shrink used in generic classes
+//
+$flexShrink: () !default;
+$flexShrink: map-merge(
+  (
+    0:    0,
+    1:    1
+  ),
+  $flexShrink
+);

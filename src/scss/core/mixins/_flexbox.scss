@@ -1,0 +1,107 @@
+/// set the flex-direction property
+///
+/// @param $className {string} name of the generated class
+/// @param $value {string} value of the flex-direction property
+@mixin flexDirection ($className, $value) {
+  .flex-#{$className} { flex-direction: #{$value} !important; }
+}
+
+/// set the flex-wrap property
+///
+/// @param $className {string} name of the generated class
+/// @param $value {string} value of the flex-wrap property
+@mixin flexWrap ($className, $value) {
+  .flex-#{$className} { flex-wrap: #{$value} !important; }
+}
+
+/// set the justify-content property
+///
+/// @param $className {string} name of the generated class
+/// @param $value {string} value of the justify-content property
+@mixin flexJustifyContent ($className, $value) {
+  .flex-justify-content-#{$className} { justify-content: #{$value} !important; }
+}
+
+/// set the align-items property
+///
+/// @param $className {string} name of the generated class
+/// @param $value {string} value of the align-items property
+@mixin flexAlignItems ($className, $value) {
+  .flex-align-items-#{$className} { align-items: #{$value} !important; }
+}
+
+/// set the align-content property
+///
+/// @param $className {string} name of the generated class
+/// @param $value {string} value of the align-content property
+@mixin flexAlignContent ($className, $value) {
+  .flex-align-content-#{$className} { align-content: #{$value} !important; }
+}
+
+/// set the align-self property
+///
+/// @param $className {string} name of the generated class
+/// @param $value {string} value of the align-self property
+@mixin flexAlignSelf ($className, $value) {
+  .flex-align-self-#{$className} { align-self: #{$value} !important; }
+}
+
+/// set the flex-grow property
+///
+/// @param $className {string} name of the generated class
+/// @param $value {number} value of the flex-grow property
+@mixin flexGrow ($className, $value) {
+  .flex-grow-#{$className} { flex-grow: $value !important; }
+}
+
+/// set the flex-shrink property
+///
+/// @param $className {string} name of the generated class
+/// @param $value {number} value of the flex-shrink property
+@mixin flexShrink ($className, $value) {
+  .flex-shrink-#{$className} { flex-shrink: $value !important; }
+}
+
+/// set custom flexbox
+///
+/// @param $flexDirection {string} property flex-direction
+/// @param $flexWrap {string} property flex-wrap
+/// @param $flexJustifyContent {string} property justify-content
+/// @param $flexAlignItems {string} property align-items
+/// @param $flexAlignContent {string} property align-content
+/// @param $flexAlignSelf {string} property align-self
+/// @param $flexGrow {string} property flex-grow
+/// @param $flexShrink {string} property flex-shrink
+@mixin flexCustom ($flexDirection: null, $flexWrap: null, $flexJustifyContent: null, $flexAlignItems: null, $flexAlignContent: null, $flexAlignSelf: null, $flexGrow: null, $flexShrink: null) {
+  @if $flexDirection != null {
+    flex-direction: #{$flexDirection};
+  }
+
+  @if $flexWrap != null {
+    flex-wrap: #{$flexWrap};
+  }
+
+  @if $flexJustifyContent != null {
+    justify-content: #{$flexJustifyContent};
+  }
+
+  @if $flexAlignItems != null {
+    align-items: #{$flexAlignItems};
+  }
+
+  @if $flexAlignContent != null {
+    align-content: #{$flexAlignContent};
+  }
+
+  @if $flexAlignSelf != null {
+    align-self: #{$flexAlignSelf};
+  }
+
+  @if $flexGrow != null {
+    flex-grow: $flexGrow;
+  }
+
+  @if $flexShrink != null {
+    flex-shrink: $flexShrink;
+  }
+}

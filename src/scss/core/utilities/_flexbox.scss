@@ -1,0 +1,51 @@
+// generate the utility classes for flex-direction
+//
+@each $key, $value in $flexDirections {
+  @include flexDirection($key, $value);
+}
+
+// generate the utility classes for flex-wrap
+//
+@each $key, $value in $flexWraps {
+  @include flexWrap($key, $value);
+}
+
+// generate the utility classes for justify-content
+//
+@each $key, $value in $justifyContent {
+  @include flexJustifyContent($key, $value);
+}
+
+// generate the utility classes for align-items
+//
+@each $key, $value in $alignItems {
+  @include flexAlignItems($key, $value);
+}
+
+// generate the utility classes for align-content
+//
+@each $key, $value in $alignContent {
+  @include flexAlignContent($key, $value);
+}
+
+// generate the utility classes for align-self
+//
+@each $key, $value in $alignSelf {
+  @include flexAlignSelf($key, $value);
+}
+
+// generate the utility classes for flex-grow
+//
+@each $key, $value in $flexGrow {
+  @include flexGrow($key, $value);
+}
+
+// generate the utility classes for flex-shrink
+//
+@each $key, $value in $flexShrink {
+  @include flexShrink($key, $value);
+}
+
+// generate the utility classes for flex
+//
+.flex-fill { flex: 1 1 auto !important; }
