@@ -1,6 +1,6 @@
 // flexbox
 //
-// list the flex-direction used in generic classes
+// list the values of flex-direction property ​​used in generic classes
 //
 $flexDirections: () !default;
 $flexDirections: map-merge(
@@ -13,7 +13,7 @@ $flexDirections: map-merge(
   $flexDirections
 );
 
-// list the flex-wrap used in generic classes
+// list the values of flex-wrap property ​​used in generic classes
 //
 $flexWraps: () !default;
 $flexWraps: map-merge(
@@ -25,13 +25,13 @@ $flexWraps: map-merge(
   $flexWraps
 );
 
-// list the justify-content used in generic classes
+// list the values of justify-content property ​​used in generic classes
 //
 $justifyContent: () !default;
 $justifyContent: map-merge(
   (
-    "flex-start":      flex-start,
-    "flex-end":        flex-end,
+    "start":           flex-start,
+    "end":             flex-end,
     "center":          center,
     "space-between":   space-between,
     "space-around":    space-around,
@@ -40,13 +40,13 @@ $justifyContent: map-merge(
   $justifyContent
 );
 
-// list the align-items used in generic classes
+// list the values of align-items property ​​used in generic classes
 //
 $alignItems: () !default;
 $alignItems: map-merge(
   (
-    "flex-start":      flex-start,
-    "flex-end":        flex-end,
+    "start":           flex-start,
+    "end":             flex-end,
     "center":          center,
     "stretch":         stretch,
     "baseline":        baseline
@@ -54,13 +54,13 @@ $alignItems: map-merge(
   $alignItems
 );
 
-// list the align-content used in generic classes
+// list the values of align-content property ​​used in generic classes
 //
 $alignContent: () !default;
 $alignContent: map-merge(
   (
-    "flex-start":      flex-start,
-    "flex-end":        flex-end,
+    "start":           flex-start,
+    "end":             flex-end,
     "center":          center,
     "stretch":         stretch,
     "space-between":   space-between,
@@ -69,14 +69,14 @@ $alignContent: map-merge(
   $alignContent
 );
 
-// list the align-self used in generic classes
+// list the values of align-self property ​​used in generic classes
 //
 $alignSelf: () !default;
 $alignSelf: map-merge(
   (
     "auto":            auto,
-    "flex-start":      flex-start,
-    "flex-end":        flex-end,
+    "start":           flex-start,
+    "end":             flex-end,
     "center":          center,
     "stretch":         stretch,
     "baseline":        baseline
@@ -84,7 +84,7 @@ $alignSelf: map-merge(
   $alignSelf
 );
 
-// list the flex-grow used in generic classes
+// list the values of flex-grow property ​​used in generic classes
 //
 $flexGrow: () !default;
 $flexGrow: map-merge(
@@ -95,7 +95,7 @@ $flexGrow: map-merge(
   $flexGrow
 );
 
-// list the flex-shrink used in generic classes
+// list the values of flex-shrink property ​​used in generic classes
 //
 $flexShrink: () !default;
 $flexShrink: map-merge(
@@ -104,4 +104,14 @@ $flexShrink: map-merge(
     1:    1
   ),
   $flexShrink
+);
+
+// list the values of flex property ​​used in generic classes
+//
+$flex: () !default;
+$flex: map-merge(
+  (
+    "fill":    1 1 auto !important,
+  ),
+  $flex
 );

@@ -1,38 +1,53 @@
-// generate the utility classes for border property
+// generate the utility classes for Border properties
 //
-@include border("border");
-@include border("border-top");
-@include border("border-right");
-@include border("border-bottom");
-@include border("border-left");
+@each $propertyName, $abbrev in $properties {
+  @if $propertyName == "border" or
+    $propertyName == "border-top" or
+    $propertyName == "border-right" or
+    $propertyName == "border-bottom" or
+    $propertyName == "border-left" {
+    @each $key, $value in $borders {
+      @if $key == "none" {
+        .#{$abbrev}-#{$key} {
+          #{$propertyName}: #{$value} !important;
+        }
+      }
 
-// with value "none"
-//
-@include border("border", false);
-@include border("border-top", false);
-@include border("border-right", false);
-@include border("border-bottom", false);
-@include border("border-left", false);
+      @else if $key == "color" {
+        @each $colorName, $hex in $colors {
+          .#{$abbrev}-#{$colorName} {
+            #{$propertyName}-#{$key}: #{$hex} !important;
+          }
+        }
 
-// generate the utility classes for border-color property
-//
-@each $key, $value in $colors {
-  .border-#{$key} {
-    border-color: $value !important;
+        @each $grayName, $hex in $grays {
+          .#{$abbrev}-#{$grayName} {
+            #{$propertyName}-#{$key}: #{$hex} !important;
+          }
+        }
+      }
+
+      @else {
+        .#{$abbrev}-#{$key} {
+          #{$propertyName}-#{$key}: #{$value} !important;
+        }
+      }
+    }
   }
 }
 
-// generate the utility classes for border-radius property
+// generate the utility classes for Border-radius properties
 //
-@include borderRadius("rounded", "border");
-@include borderRadius("rounded-sm", "border", $border-radius-sm);
-@include borderRadius("rounded-lg", "border", $border-radius-lg);
-@include borderRadius("rounded-top", ("border-top-left", "border-top-right"));
-@include borderRadius("rounded-right", ("border-top-right", "border-bottom-right"));
-@include borderRadius("rounded-bottom", ("border-bottom-right", "border-bottom-left"));
-@include borderRadius("rounded-left", ("border-top-left", "border-bottom-left"));
-@include borderRadius("rounded-none", "border", 0);
-
-// with a rounded radius-radius 
-@include borderRadius("rounded-circle", "border", $rounded-circle);
-@include borderRadius("rounded-pill", "border", $rounded-pill);
+@each $propertyName, $abbrev in $properties {
+  @if $propertyName == "border-radius" or
+    $propertyName == "border-radius-top" or
+    $propertyName == "border-radius-right" or
+    $propertyName == "border-radius-bottom" or
+    $propertyName == "border-radius-left" {
+    @each $key, $value in $rounded {
+      .#{$abbrev}-#{$key} {
+        #{$propertyName}: #{$value} !important;
+      }
+    }
+  }
+}

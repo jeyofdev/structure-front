@@ -1,14 +1,8 @@
-/// set the word break
+/// set the breakword
 ///
 @mixin textBreak () {
   .text-break {
     word-break: break-word !important;
     overflow-wrap: break-word !important;
   }
-}
-
-/// reset the property color
-///
-@mixin textReset () {
-  .text-reset { color: inherit !important; }
 }

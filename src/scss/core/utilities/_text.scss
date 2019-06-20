@@ -1,39 +1,60 @@
-// generate the utility classes for property font-weight
+// generate the utility classes for properties Font & Text
 //
-@each $key, $value in $fontWeight {
-  .font-weight-#{$key} { font-weight: $value !important; }
-}
+@each $propertyName, $abbrev in $properties {
+  // font-weight
+  @if $propertyName == "font-weight" {
+    @each $key, $value in $fontWeight {
+      .font-weight-#{$key} {
+        #{$propertyName}: #{$value} !important;
+      }
+    }
+  }
 
-// generate the utility classes for property font-style
-//
-@each $key, $value in $fontStyles {
-  .font-style-#{$key} { font-style: $value !important; }
-}
+  // font-style
+  @if $propertyName == "font-style" {
+    @each $key, $value in $fontStyles {
+      .font-style-#{$key} {
+        #{$propertyName}: #{$value} !important;
+      }
+    }
+  }
 
-// generate the utility classes for property white-space
-//
-@each $key, $value in $whiteSpaces {
-  .text-#{$key} { white-space: $value !important; }
-}
+  // white-space
+  @if $propertyName == "white-space" {
+    @each $key, $value in $whiteSpaces {
+      .text-#{$key} { #{$propertyName}: #{$value} !important; }
+    }
+  }
 
-// generate the utility classes for property text-align
-//
-@each $key, $value in $textAligns {
-  .text-#{$key} { text-align: $value !important; }
-}
+  // text-align
+  @if $propertyName == "text-align" {
+    @each $key, $value in $textAligns {
+      .text-#{$key} {
+        #{$propertyName}: #{$value} !important;
+      }
+    }
+  }
 
-// generate the utility classes for property text-transform
-//
-@each $key, $value in $textTransform {
-  .text-#{$key} { text-transform: $value !important; }
-}
+  // text-transform
+  @if $propertyName == "text-transform" {
+    @each $key, $value in $textTransform {
+      .text-#{$key} {
+        #{$propertyName}: #{$value} !important;
+      }
+    }
+  }
 
-// generate the utility classes for property text-decoration
-//
-@each $key, $value in $textDecorations {
-  .text-decoration-#{$key} { text-decoration: $value !important; }
-}
+  // text-decoration
+  @if $propertyName == "text-decoration" {
+    @each $key, $value in $textDecorations {
+      .text-decoration-#{$key} {
+        #{$propertyName}: #{$value} !important;
+      }
+    }
+  }
 
-// generate the utility classes for word break
-//
-@include textBreak();
+  // word break
+  @if $propertyName == "text-decoration" {
+    @include textBreak();
+  }
+}

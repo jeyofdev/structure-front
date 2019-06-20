@@ -1,38 +1,47 @@
-// generate the utility classes for properties color & background-color
+// generate the utility classes for properties Color & Background-color
 //
-// with shades of colors
-//
-@each $key, $value in $colors {
-  .text-#{$key} {
-    color: $value !important;
+@each $propertyName, $abbrev in $properties {
+  // for the background-color property
+  //
+  @if $propertyName == "background-color" {
+    @each $key, $value in $colors {
+      .#{$abbrev}-#{$key} {
+        #{$propertyName}: #{$value} !important;
+      }
+    }
+
+    @each $key, $value in $grays {
+      .#{$abbrev}-#{$key} {
+        #{$propertyName}: #{$value} !important;
+      }
+    }
   }
 
-  .bg-#{$key} {
-    background-color: $value !important;
+  // for the color property
+  //
+  @if $propertyName == "color" {
+    @each $key, $value in $colors {
+      .#{$abbrev}-#{$key} {
+        #{$propertyName}: #{$value} !important;
+      }
+    }
+
+    @each $key, $value in $grays {
+      .#{$abbrev}-#{$key} {
+        #{$propertyName}: #{$value} !important;
+      }
+    }
+
+    // with contextual colors
+    @each $key, $value in $textColors {
+      .text-#{$key} {
+        #{$propertyName}: #{$value} !important;
+      }
+    }
+
+    // reset color
+    .text-reset {
+      #{$propertyName}: inherit !important;
+    }
   }
 }
-
-// with shades of gray
-//
-@each $key, $value in $grays {
-  .text-gray-#{$key} {
-    color: $value !important;
-  }
-
-  .bg-gray-#{$key} {
-    background-color: $value !important;
-  }
-}
-
-// with contextual colors
-//
-@each $key, $value in $textColors {
-  .text-#{$key} {
-    color: $value !important;
-  }
-}
-
-// reset color
-//
-@include textReset();
-

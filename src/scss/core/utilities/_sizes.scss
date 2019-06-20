@@ -2,20 +2,44 @@
 //
 @each $propertyName, $abbrev in $properties {
   @if ($propertyName == "width") or ($propertyName == "height") {
-    @each $key, $value in $units {
-      .#{$abbrev}-#{$key} { #{$propertyName}: $value !important; }
+    @each $key, $value in $sizes {
+      .#{$abbrev}-#{$key} {
+        #{$propertyName}: #{$value} !important;
+      }
+    }
+
+    .#{$abbrev}-vw-100 {
+      #{$propertyName}: 100vw !important;
+    }
+
+    .#{$abbrev}-vh-100 {
+      #{$propertyName}: 100vh !important;
     }
   }
 }
 
 // generate the utility classes for properties Max-width and Max-Height
 //
-.mw-100 { max-width: 100% !important; }
-.mh-100 { max-height: 100% !important; }
+@each $propertyName, $abbrev in $properties {
+  @if ($propertyName == "max-width") or ($propertyName == "max-height") {
+    .#{$abbrev}-100 {
+      #{$propertyName}: 100% !important;
+    }
+  }
+}
 
-// generate the utility classes for viewport additional helpers
+// generate the utility classes for properties Min-width and Min-Height
 //
-@include viewport("vw", "width", width);
-@include viewport("vh", "height", height);
-@include viewport("min-vw", "min-width", width);
-@include viewport("min-vh", "min-height", height);
+@each $propertyName, $abbrev in $properties {
+  @if $propertyName == "min-width" {
+    .#{$abbrev}-vw-100 {
+      #{$propertyName}: $min-vw-100 !important;
+    }
+  }
+
+  @if $propertyName == "min-height" {
+    .#{$abbrev}-vh-100 {
+      #{$propertyName}: $min-vh-100 !important;
+    }
+  }
+}

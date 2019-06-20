@@ -1,65 +1,49 @@
-/// set the flex-direction property
+/// set the flexbox properties
 ///
+/// @param $propertyName {string} name of the property flex 
+/// @param $propertyValue {string} value of the property flex
 /// @param $className {string} name of the generated class
-/// @param $value {string} value of the flex-direction property
-@mixin flexDirection ($className, $value) {
-  .flex-#{$className} { flex-direction: #{$value} !important; }
-}
+/// @param $prefix {string} prefix of the class name
+/// @param $suffix {string} suffix of the class name
+@mixin flexProperty ($propertyName, $propertyValue, $className, $prefix: null, $suffix: null) {
+  @if ($propertyName == "flex-direction") or ($propertyName == "flex-wrap") {
+    @if $prefix != null {
+      $className: #{$prefix}-#{$className};
+    }
 
-/// set the flex-wrap property
-///
-/// @param $className {string} name of the generated class
-/// @param $value {string} value of the flex-wrap property
-@mixin flexWrap ($className, $value) {
-  .flex-#{$className} { flex-wrap: #{$value} !important; }
-}
+    .#{$className} { #{$propertyName}: #{$propertyValue} !important; }
+  }
 
-/// set the justify-content property
-///
-/// @param $className {string} name of the generated class
-/// @param $value {string} value of the justify-content property
-@mixin flexJustifyContent ($className, $value) {
-  .flex-justify-content-#{$className} { justify-content: #{$value} !important; }
-}
+  @else if ($propertyName == "flex-grow") or ($propertyName == "flex-shrink") {
+    @if $prefix != null {
+      $className: #{$prefix}-#{$className};
+    }
 
-/// set the align-items property
-///
-/// @param $className {string} name of the generated class
-/// @param $value {string} value of the align-items property
-@mixin flexAlignItems ($className, $value) {
-  .flex-align-items-#{$className} { align-items: #{$value} !important; }
-}
+    @else {
+      $className: #{$className};
+    }
 
-/// set the align-content property
-///
-/// @param $className {string} name of the generated class
-/// @param $value {string} value of the align-content property
-@mixin flexAlignContent ($className, $value) {
-  .flex-align-content-#{$className} { align-content: #{$value} !important; }
-}
+    .#{$className} { #{$propertyName}: #{$propertyValue} !important; }
+  }
 
-/// set the align-self property
-///
-/// @param $className {string} name of the generated class
-/// @param $value {string} value of the align-self property
-@mixin flexAlignSelf ($className, $value) {
-  .flex-align-self-#{$className} { align-self: #{$value} !important; }
-}
+  @else if $propertyName == "flex" {
+    @if $suffix != null {
+      $className: #{$className}-#{$suffix};
+    }
+    .#{$className} { #{$propertyName}: #{$propertyValue} !important; }
+  }
 
-/// set the flex-grow property
-///
-/// @param $className {string} name of the generated class
-/// @param $value {number} value of the flex-grow property
-@mixin flexGrow ($className, $value) {
-  .flex-grow-#{$className} { flex-grow: $value !important; }
-}
+  @else {
+    @if $prefix != null {
+      $className: #{$prefix}-#{$propertyName}-#{$className};
+    }
 
-/// set the flex-shrink property
-///
-/// @param $className {string} name of the generated class
-/// @param $value {number} value of the flex-shrink property
-@mixin flexShrink ($className, $value) {
-  .flex-shrink-#{$className} { flex-shrink: $value !important; }
+    @else {
+      $className: #{$propertyName}-#{$className};
+    }
+
+    .#{$className} { #{$propertyName}: #{$propertyValue} !important; }
+  }
 }
 
 /// set custom flexbox
@@ -98,10 +82,10 @@
   }
 
   @if $flexGrow != null {
-    flex-grow: $flexGrow;
+    flex-grow: #{$flexGrow};
   }
 
   @if $flexShrink != null {
-    flex-shrink: $flexShrink;
+    flex-shrink: #{$flexShrink};
   }
 }

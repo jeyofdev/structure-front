@@ -1,5 +1,18 @@
 // box-shadow
 //
+// list the values of the box-shadow property ​​used in generic classes
+//
 $box-shadow:       0 .5rem 1rem rgba($black, .15) !default;
 $box-shadow-sm:    0 .125rem .25rem rgba($black, .075) !default;
 $box-shadow-lg:    0 1rem 3rem rgba($black, .175) !default;
+
+$boxShadows: () !default;
+$boxShadows: map-merge(
+  (
+    "none":        none,
+    "default":     $box-shadow,
+    "sm":          $box-shadow-sm,
+    "lg":          $box-shadow-lg
+  ),
+  $boxShadows
+);

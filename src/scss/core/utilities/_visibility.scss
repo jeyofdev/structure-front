@@ -1,7 +1,0 @@
-// generate the utility classes for property Visibility
-//
-@each $key, $value in $visibilities {
-  .#{$key} {
-    visibility: $value !important;
-  }
-}

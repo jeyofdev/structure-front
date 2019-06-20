@@ -1,8 +1,8 @@
-// generate the utility classes for Box-shadow property
+// generate the utility classes for property Display
 //
 @each $propertyName, $abbrev in $properties {
-  @if $propertyName == "box-shadow" {
-    @each $key, $value in $boxShadows {
+  @if $propertyName == "display" {
+    @each $key, $value in $displays {
       .#{$abbrev}-#{$key} {
         #{$propertyName}: #{$value} !important;
       }

@@ -1,7 +1,13 @@
 // text
 //
-// list the font-weight used in generic classes
+// list the values of the font-weight property ​​used in generic classes
 //
+$font-weight-lighter:   lighter !default;
+$font-weight-light:     300 !default;
+$font-weight-normal:    400 !default;
+$font-weight-bold:      700 !default;
+$font-weight-bolder:    bolder !default;
+
 $fontWeight: () !default;
 $fontWeight: map-merge(
   (
@@ -14,7 +20,7 @@ $fontWeight: map-merge(
   $fontWeight
 );
 
-// list the font-style used in generic classes
+// list the values of the font-style property ​​used in generic classes
 //
 $fontStyles: () !default;
 $fontStyles: map-merge(
@@ -25,8 +31,7 @@ $fontStyles: map-merge(
   $fontStyles
 );
 
-// list the white-space used in generic classes
-//
+// list the values of the white-space property ​​used in generic classes
 $whiteSpaces: () !default;
 $whiteSpaces: map-merge(
   (
@@ -37,7 +42,7 @@ $whiteSpaces: map-merge(
   $whiteSpaces
 );
 
-// list the text-align used in generic classes
+// list the values of the text-align property ​​used in generic classes
 //
 $textAligns: () !default;
 $textAligns: map-merge(
@@ -50,7 +55,7 @@ $textAligns: map-merge(
   $textAligns
 );
 
-// list the text-transform used in generic classes
+// list the values of the text-transform property ​​used in generic classes
 //
 $textTransform: () !default;
 $textTransform: map-merge(
@@ -63,7 +68,7 @@ $textTransform: map-merge(
   $textTransform
 );
 
-// list the text-decoration used in generic classes
+// list the values of the text-decoration property ​​used in generic classes
 //
 $textDecorations: () !default;
 $textDecorations: map-merge(
@@ -76,13 +81,13 @@ $textDecorations: map-merge(
 
 // list the contextual colors used in generic classes
 //
+$text-muted:     $gray-600 !default;
+
 $textColors: () !default;
 $textColors: map-merge(
   (
     "body":      $body-color,
-    "muted":     $text-muted,
-    "black-50":  rgba($black, .5),
-    "white-50":  rgba($white, .5)
+    "muted":     $text-muted
   ),
   $textColors
 );

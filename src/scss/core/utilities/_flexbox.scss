@@ -1,51 +1,66 @@
-// generate the utility classes for flex-direction
+// generate the utility classes for Flexbox
 //
-@each $key, $value in $flexDirections {
-  @include flexDirection($key, $value);
-}
+@each $propertyName, $abbrev in $properties {
+  // flex-direction
+  @if $propertyName == "flex-direction" {
+    @each $key, $value in $flexDirections {
+      @include flexProperty("flex-direction", $value, $key);
+    }
+  }
 
-// generate the utility classes for flex-wrap
-//
-@each $key, $value in $flexWraps {
-  @include flexWrap($key, $value);
-}
+  // flex-wrap
+  @if $propertyName == "flex-wrap" {
+    @each $key, $value in $flexWraps {
+      @include flexProperty("flex-wrap", $value, $key, "flex");
+    }
+  }
 
-// generate the utility classes for justify-content
-//
-@each $key, $value in $justifyContent {
-  @include flexJustifyContent($key, $value);
-}
+  // justify-content
+  @if $propertyName == "justify-content" {
+    @each $key, $value in $justifyContent {
+      @include flexProperty("justify-content", $value, $key, "flex");
+    }
+  }
 
-// generate the utility classes for align-items
-//
-@each $key, $value in $alignItems {
-  @include flexAlignItems($key, $value);
-}
+  // align-items
+  @if $propertyName == "justify-content" {
+    @each $key, $value in $alignItems {
+      @include flexProperty("align-items", $value, $key, "flex");
+    }
+  }
 
-// generate the utility classes for align-content
-//
-@each $key, $value in $alignContent {
-  @include flexAlignContent($key, $value);
-}
+  // align-content
+  @if $propertyName == "align-content" {
+    @each $key, $value in $alignContent {
+      @include flexProperty("align-content", $value, $key, "flex");
+    }
+  }
 
-// generate the utility classes for align-self
-//
-@each $key, $value in $alignSelf {
-  @include flexAlignSelf($key, $value);
-}
+  // align-self
+  @if $propertyName == "align-self" {
+    @each $key, $value in $alignSelf {
+      @include flexProperty("align-self", $value, $key, "flex");
+    }
+  }
 
-// generate the utility classes for flex-grow
-//
-@each $key, $value in $flexGrow {
-  @include flexGrow($key, $value);
-}
+  // flex-grow
+  @if $propertyName == "flex-grow" {
+    @each $key, $value in $flexGrow {
+      @include flexProperty("flex-grow", $value, $abbrev, "flex");
+    }
+  }
 
-// generate the utility classes for flex-shrink
-//
-@each $key, $value in $flexShrink {
-  @include flexShrink($key, $value);
-}
+  // flex-grow
+  @if $propertyName == "flex-shrink" {
+    @each $key, $value in $flexShrink {
+      @include flexProperty("flex-shrink", $value, $abbrev, "flex");
+    }
+  }
 
-// generate the utility classes for flex
-//
-.flex-fill { flex: 1 1 auto !important; }
+  // flex
+  @if $propertyName == "flex" {
+    @each $key, $value in $flex {
+      @include flexProperty("flex", $value, $propertyName, "flex", "fill");
+    }
+  }
+}

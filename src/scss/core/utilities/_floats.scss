@@ -1,0 +1,21 @@
+// generate the utility classes for property Float
+//
+@each $propertyName, $abbrev in $properties {
+  @if $propertyName == "float" {
+    @each $key, $value in $floats {
+      .#{$abbrev}-#{$key} {
+        #{$propertyName}: #{$value} !important;
+      }
+    }
+  }
+}
+
+// generate the clearfix utility class to clear a Float 
+//
+.clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

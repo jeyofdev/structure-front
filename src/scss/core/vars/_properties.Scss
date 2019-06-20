@@ -1,14 +1,73 @@
 // css properties
 //
-// list the css properties used in generic classes
+// list the css properties
 //
 $properties: () !default;
 $properties: map-merge(
   (
-    "margin": "m",
-    "padding": "p",
-    "width": "w",
-    "height": "h"
+    "position":              "p",
+    "display":               "d",
+    "flex-direction":        "direction",
+    "flex-wrap":             "wrap",
+    "justify-content":       "justify-content",
+    "align-items":           "align-items",
+    "align-content":         "align-content",
+    "align-self":            "align-self",
+    "flex-grow":             "grow",
+    "flex-shrink":           "shrink",
+    "flex":                  "flex",
+    "float":                 "float",
+    "background-color":      "bg",
+    "color":                 "text",
+    "vertical-align":        "va",
+    "margin":                "m",
+    "margin-top":            "mt",
+    "margin-right":          "mr",
+    "margin-bottom":         "mb",
+    "margin-left":           "ml",
+    "padding":               "p",
+    "padding-top":           "pt",
+    "padding-right":         "pr",
+    "padding-bottom":        "pb",
+    "padding-left":          "pl",
+    "width":                 "w",
+    "min-width":             "min-w",
+    "max-width":             "max-w",
+    "height":                "h",
+    "min-height":            "min-h",
+    "max-height":            "max-h",
+    "border":                "b",
+    "border-top":            "bt",
+    "border-right":          "br",
+    "border-bottom":         "bb",
+    "border-left":           "bl",
+    "border-color":          "bc",
+    "border-radius-top":     "rounded-top",
+    "border-radius-right":   "rounded-right",
+    "border-radius-bottom":  "rounded-bottom",
+    "border-radius-left":    "rounded-left",
+    "overflow":              "o",
+    "visibility":            "v",
+    "box-shadow":            "bs",
+    "font-weight":           "font-weight",
+    "font-style":            "font-style",
+    "white-space":           "white-space",
+    "text-align":            "text-align",
+    "text-transform":        "text-transform",
+    "text-decoration":       "text-decoration",
+    "word-break":            "word-break"
   ),
   $properties
 );
+
+// list the global properties in generic classes
+//
+$propertiesGlobal: () !default;
+$propertiesGlobal: map-merge(
+  (
+    "horizontal":     "x",
+    "vertical":       "y",
+  ),
+  $propertiesGlobal
+);
+

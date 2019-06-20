@@ -1,0 +1,13 @@
+// float
+//
+// list the values of float property ​​used in generic classes
+//
+$floats: () !default;
+$floats: map-merge(
+  (
+    "none":   none,
+    "left":   left,
+    "right":  right
+  ),
+  $floats
+);

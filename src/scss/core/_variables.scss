@@ -1,17 +1,17 @@
 // variables
 //
+@import "vars/properties";
 @import "vars/colors";
 @import "vars/body";
-@import "vars/spacing";
-@import "vars/properties";
 @import "vars/positions";
-@import "vars/display";
+@import "vars/displays";
 @import "vars/flexbox";
+@import "vars/floats";
 @import "vars/aligns";
-@import "vars/overflow";
-@import "vars/visibility";
-@import "vars/units";
+@import "vars/sizes";
+@import "vars/spacers";
 @import "vars/borders";
 @import "vars/shadows";
-@import "vars/fonts";
+@import "vars/overflows";
+@import "vars/visibilities";
 @import "vars/text";

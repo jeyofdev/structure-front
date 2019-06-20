@@ -1,0 +1,35 @@
+// generate the utility classes for properties Margin and Padding 
+//
+@each $propertyName, $abbrev in $properties {
+  @if $propertyName == "margin" or
+    $propertyName == "margin-top" or
+    $propertyName == "margin-right" or
+    $propertyName == "margin-bottom" or
+    $propertyName == "margin-left" or
+    $propertyName == "padding" or
+    $propertyName == "padding-top" or
+    $propertyName == "padding-right" or
+    $propertyName == "padding-bottom" or
+    $propertyName == "padding-left" {
+    @each $key, $value in $spacers {
+      .#{$abbrev}-#{$key} {
+        #{$propertyName}: #{$value} !important;
+      }
+    }
+  }
+}
+
+// generate the global utility classes for properties Margin and Padding 
+//
+@each $globalName, $globalAbbrev in $propertiesGlobal {
+  @each $propertyName, $abbrev in $properties {
+    @if $propertyName == "margin" or $propertyName == "padding" {
+      @each $key, $value in $spacers {
+        .#{$abbrev}#{$globalAbbrev}-#{$key} {
+          #{$propertyName}-right: #{$value} !important;
+          #{$propertyName}-left: #{$value} !important;
+        }
+      }
+    }
+  }
+}
