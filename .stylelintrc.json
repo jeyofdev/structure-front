@@ -15,7 +15,8 @@
         "return", 
         "content", 
         "media", 
-        "include"
+        "include",
+        "extend"
       ]
     }],
     "number-leading-zero": "never",

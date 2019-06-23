@@ -6,7 +6,7 @@
 /// @param $paddingContainer total value of padding left and right
 @mixin make-container($className: "container", $paddingContainer: $grid-gutter-width) {
   .#{$className} {
-    width: 100%;
+    width: calc(100% - #{$paddingContainer});
     padding-right: $paddingContainer / 2;
     padding-left: $paddingContainer / 2;
     margin: 0 auto;
@@ -37,8 +37,6 @@
   .#{$className} {
     display: flex;
     flex-wrap: wrap;
-    margin-right: - $paddingRow / 2;
-    margin-left: - $paddingRow / 2;
   }
 }
 
