@@ -1,5 +1,13 @@
 // text
 //
+// headings
+//
+$headings-margin-bottom:      $spacer-base / 2 !default;
+$headings-font-family:        null !default;
+$headings-font-weight:        500 !default;
+$headings-line-height:        1.2 !default;
+$headings-color:              null !default;
+
 // list the values of the font-weight property ​​used in generic classes
 //
 $font-weight-lighter:   lighter !default;

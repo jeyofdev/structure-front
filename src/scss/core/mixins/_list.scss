@@ -1,0 +1,6 @@
+/// clear the default style of lists
+///
+@mixin list-unstyled () {
+  padding-left: 0;
+  list-style: none;
+}

@@ -1,0 +1,16 @@
+// generate the classes for clear the default style of lists
+//
+.list-unstyled,
+.list-inline {
+  @include list-unstyled;
+}
+
+// generate the classes for list items
+//
+.list-inline-item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: $list-inline-margin;
+  }
+}
