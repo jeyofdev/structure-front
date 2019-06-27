@@ -1,0 +1,53 @@
+/// set the css properties of the table tags
+///
+/// @param $className {string} name of the generated class
+/// @param $suffix {string} suffix of the generated class
+/// @param $propertyValue value of the css property
+@mixin tableColor ($className, $suffix, $propertyValue) {
+  @if $className == "table-bg" {
+    .#{$className}-#{$suffix} {
+      @include tableTag(false) {
+        background: #{$propertyValue} !important;
+      }
+    }
+  }
+
+  @else if $className == "table-color" {
+    .#{$className}-#{$suffix} {
+      @include tableTag() {
+        color: #{$propertyValue} !important;
+      }
+    }
+  }
+
+  @else if ($className == "table-border") {
+    .#{$className}-#{$suffix} {
+      @include tableTag() {
+        border-color: #{$propertyValue} !important;
+      }
+    }
+  }
+}
+
+/// set the table tags to use (th, td...)
+///
+/// @param $fullTags {boolean} enable or not all table tags
+@mixin tableTag($fullTags: true) {
+  @if $fullTags {
+    &,
+    th,
+    td,
+    thead th,
+    tbody + tbody {
+      @content;
+    }
+  }
+
+  @else {
+    &,
+    > th,
+    > td {
+      @content;
+    }
+  }
+}

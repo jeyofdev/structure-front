@@ -1,0 +1,93 @@
+// generate the default classes for table tags
+//
+.table {
+  width: $table-width;
+  margin-bottom: $table-margin;
+  color: $table-color;
+  background-color: $table-bg;
+
+  th,
+  td {
+    padding: $table-cell-padding;
+    vertical-align: $table-cell-valign;
+    border-top: $table-border-width solid $table-border-color;
+  }
+
+  thead th {
+    vertical-align: bottom;
+    border-bottom: (2 * $table-border-width) solid $table-border-color;
+  }
+
+  tbody {
+    border-top: (2 * $table-border-width) solid $table-border-color;
+  }
+}
+
+.table-sm {
+  th,
+  td {
+    padding: $table-cell-padding-sm;
+  }
+}
+
+// generate the classes to set the border on child tags of table tags
+//
+.table-bordered {
+  border: $table-border-width solid $table-border-color;
+
+  th,
+  td {
+    border: $table-border-width solid $table-border-color;
+  }
+
+  thead {
+    th,
+    td {
+      border-bottom-width: 2 * $table-border-width;
+    }
+  }
+}
+
+// generate the class to remove borders on child tags of table tags
+//
+.table-borderless {
+  th,
+  td,
+  thead th,
+  tbody + tbody {
+    border: 0;
+  }
+}
+
+// generate alternative styles for tr tags
+//
+.table-striped {
+  tbody tr:nth-of-type(#{$table-striped-order}) {
+    background-color: $table-accent-bg;
+  }
+}
+
+// generate classes for child table tags in hover
+//
+.table-hover {
+  tbody tr {
+    @include hover {
+      color: $table-hover-color;
+      background-color: $table-hover-bg;
+    }
+  }
+}
+
+// generate the classes of table tag for Color & Background-color & border-color properties
+//
+@each $key, $value in $colors {
+  @include tableColor("table-bg", $key, $value);
+  @include tableColor("table-border", $key, $value);
+  @include tableColor("table-color", $key, $value);
+}
+
+@each $key, $value in $grays {
+  @include tableColor("table-bg", $key, $value);
+  @include tableColor("table-border", $key, $value);
+  @include tableColor("table-color", $key, $value);
+}
