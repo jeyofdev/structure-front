@@ -5,3 +5,12 @@
     @content;
   }
 }
+
+/// set the hover and focus of an element
+///
+@mixin hover-focus {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}

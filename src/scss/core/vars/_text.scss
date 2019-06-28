@@ -8,6 +8,9 @@ $font-weight-normal:    400 !default;
 $font-weight-bold:      700 !default;
 $font-weight-bolder:    bolder !default;
 
+$font-weight-base:      $font-weight-normal !default;
+$dt-font-weight:        $font-weight-bold !default;
+
 $fontWeight: () !default;
 $fontWeight: map-merge(
   (
@@ -111,6 +114,10 @@ $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
 
+// set defaults for the line-height property
+//
+$line-height-base:      1.5 !default;
+
 // set defaults for properties of emphasis elements
 //
 $small-font-size:             80% !default;
@@ -126,6 +133,10 @@ $blockquote-small-font-size:  $small-font-size !default;
 $blockquote-font-size:        $font-size-base * 1.25 !default;
 $blockquote-icon-before:      "\2014\00A0";
 $blockquote-icon-after:       "\2014\00A0";
+
+// Paragraphs
+//
+$paragraph-margin-bottom:     1rem !default;
 
 // headings
 //
@@ -147,3 +158,10 @@ $fontSizeHeader: map-merge(
   ),
   $fontSizeHeader
 );
+
+// Links
+//
+$link-color:                  $blue !default;
+$link-decoration:             none !default;
+$link-hover-color:            darken($link-color, 15) !default;
+$link-hover-decoration:       underline !default;
