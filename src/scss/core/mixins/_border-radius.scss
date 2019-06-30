@@ -1,0 +1,13 @@
+/// set a border radius on an element
+///
+/// @param $radius  value of the border-radius property
+/// @param $fallback-border-radius {boolean}
+@mixin borderRadius($radius: $border-radius, $fallback-border-radius: false) {
+  @if $enable-rounded {
+    border-radius: $radius;
+  }
+
+  @else if $fallback-border-radius != false {
+    border-radius: $fallback-border-radius;
+  }
+}

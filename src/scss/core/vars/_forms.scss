@@ -1,0 +1,96 @@
+// buttons in a form
+//
+$input-btn-font-family:       null !default;
+$input-btn-font-size:         $font-size-base !default;
+$input-btn-line-height:       $line-height-base !default;
+$input-btn-padding-y:         .375rem !default;
+$input-btn-padding-x:         .75rem !default;
+$input-btn-border-width:      $border-width !default;
+
+$input-btn-font-size-sm:      $font-size-sm !default;
+$input-btn-line-height-sm:    $line-height-sm !default;
+$input-btn-padding-y-sm:      .25rem !default;
+$input-btn-padding-x-sm:      .5rem !default;
+
+$input-btn-font-size-lg:      $font-size-lg !default;
+$input-btn-line-height-lg:    $line-height-lg !default;
+$input-btn-padding-y-lg:      .5rem !default;
+$input-btn-padding-x-lg:      1rem !default;
+
+// buttons focus in a form
+//
+$input-btn-active-bg:         $blue !default;
+
+$input-btn-focus-width:       .2rem !default;
+$input-btn-focus-color:       rgba($input-btn-active-bg, .25) !default;
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+
+// inputs default color
+//
+$input-bg:                    $white !default;
+$input-color:                 $gray-700 !default;
+
+// inputs borders
+//
+$input-border-color:          $gray-400 !default;
+$input-border-width:          $input-btn-border-width !default;
+$input-height-border:         $input-border-width * 2 !default;
+
+// inputs spacing
+//
+$input-padding-y:             $input-btn-padding-y !default;
+$input-padding-x:             $input-btn-padding-x !default;
+
+$input-padding-y-sm:          $input-btn-padding-y-sm !default;
+$input-padding-x-sm:          $input-btn-padding-x-sm !default;
+
+$input-padding-y-lg:          $input-btn-padding-y-lg !default;
+$input-padding-x-lg:          $input-btn-padding-x-lg !default;
+
+// inputs
+//
+$input-font-family:           $input-btn-font-family !default;
+$input-font-size:             $input-btn-font-size !default;
+$input-font-weight:           $font-weight-base !default;
+$input-line-height:           $input-btn-line-height !default;
+$input-height:                calc(#{$input-line-height * 1em} + #{$input-padding-y * 2} + #{$input-height-border}) !default;
+
+$input-font-size-sm:          $input-btn-font-size-sm !default;
+$input-line-height-sm:        $input-btn-line-height-sm !default;
+$input-height-sm:             calc(#{$input-line-height-sm * 1em} + #{$input-btn-padding-y-sm * 2} + #{$input-height-border}) !default;
+
+$input-font-size-lg:          $input-btn-font-size-lg !default;
+$input-line-height-lg:        $input-btn-line-height-lg !default;
+$input-height-lg:             calc(#{$input-line-height-lg * 1em} + #{$input-btn-padding-y-lg * 2} + #{$input-height-border}) !default;
+
+// inputs effects
+//
+$input-box-shadow:            inset 0 1px 1px rgba($black, .075) !default;
+$input-border-radius:         $border-radius-base !default;
+$input-border-radius-lg:      $border-radius-lg !default;
+$input-border-radius-sm:      $border-radius-sm !default;
+
+// inputs placeholder
+$input-placeholder-color:     $gray-600 !default;
+
+// inputs focus
+$input-active-bg:             $input-btn-active-bg !default;
+$input-focus-bg:              $input-bg !default;
+$input-focus-border-color:    lighten($input-active-bg, 25%) !default;
+$input-focus-color:           $input-color !default;
+$input-focus-width:           $input-btn-focus-width !default;
+$input-focus-box-shadow:      $input-btn-focus-box-shadow !default;
+
+// inputs group
+$form-group-margin-bottom:              1rem !default;
+
+// inputs grid
+$form-grid-gutter-width:                10px !default;
+
+// inputs checkboxes and radios
+$form-check-input-gutter:               1.25rem !default;
+$form-check-input-margin-y:             .3rem !default;
+$form-check-input-margin-x:             .25rem !default;
+
+$form-check-inline-margin-x:            .75rem !default;
+$form-check-inline-input-margin-x:      .3125rem !default;

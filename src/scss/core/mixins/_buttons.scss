@@ -1,0 +1,14 @@
+/// set the button sizes
+///
+/// @param $padding-y  value of padding-top and padding-bottom properties
+/// @param $padding-x  value of padding-left and padding-right properties
+/// @param $line-height  value of line-height property
+/// @param $border-radius  value of border-radius property
+@mixin buttonSize($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+  @include font-size($font-size);
+
+  line-height: $line-height;
+  padding: $padding-y $padding-x;
+
+  @include borderRadius($border-radius, 0);
+}
