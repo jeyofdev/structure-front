@@ -1,0 +1,123 @@
+// fonts
+//
+// font-family
+//
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif !default;
+
+// font-size
+//
+$font-size-base:        1rem !default;
+$font-size-sm:          $font-size-base * .875 !default;
+$font-size-lg:          $font-size-base * 1.25 !default;
+
+$fontSizes: () !default;
+$fontSizes: map-merge(
+  (
+    "base":       $font-size-base,
+    "sm":         $font-size-sm,
+    "lg":         $font-size-lg
+  ),
+  $fontSizes
+);
+
+// font-weight
+//
+$font-weight-lighter:       lighter !default;
+$font-weight-light:         300 !default;
+$font-weight-normal:        400 !default;
+$font-weight-bold:          700 !default;
+$font-weight-bolder:        bolder !default;
+
+$font-weight-base:          $font-weight-normal !default;
+$dt-font-weight:            $font-weight-bold !default;
+
+$fontWeight: () !default;
+$fontWeight: map-merge(
+  (
+    "normal":       $font-weight-normal,
+    "light":        $font-weight-light,
+    "lighter":      $font-weight-lighter,
+    "bold":         $font-weight-bold,
+    "bolder":       $font-weight-bolder
+  ),
+  $fontWeight
+);
+
+// font-style
+//
+$fontStyles: () !default;
+$fontStyles: map-merge(
+  (
+    "normal":     normal,
+    "italic":     italic
+  ),
+  $fontStyles
+);
+
+// line-height
+//
+$line-height-base:      1.5 !default;
+$line-height-sm:        $line-height-base !default;
+$line-height-lg:        $line-height-base !default;
+
+$lineHeights: () !default;
+$lineHeights: map-merge(
+  (
+    "base":     $line-height-base,
+    "sm":       $line-height-sm,
+    "lg":       $line-height-lg
+  ),
+  $lineHeights
+);
+
+// white-space
+$whiteSpaces: () !default;
+$whiteSpaces: map-merge(
+  (
+    "normal":         normal,
+    "nowrap":         nowrap,
+    "pre":            pre,
+    "prewrap":        pre-wrap,
+    "preline":        pre-line
+  ),
+  $whiteSpaces
+);
+
+// text-align
+//
+$textAligns: () !default;
+$textAligns: map-merge(
+  (
+    "left":           left,
+    "right":          right,
+    "center":         center,
+    "justify":        justify
+  ),
+  $textAligns
+);
+
+// text-transform
+//
+$textTransform: () !default;
+$textTransform: map-merge(
+  (
+    "none":           none,
+    "lowercase":      lowercase,
+    "uppercase":      uppercase,
+    "capitalize":     capitalize
+  ),
+  $textTransform
+);
+
+// text-decoration
+//
+$textDecorations: () !default;
+$textDecorations: map-merge(
+  (
+    "none":           none,
+    "underline":      underline
+  ),
+  $textDecorations
+);

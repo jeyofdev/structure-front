@@ -1,0 +1,5 @@
+// generate the classes for the grid system
+//
+@if $enable-grid-classes {
+  @include make-grid-columns();
+}

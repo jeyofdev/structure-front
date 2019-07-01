@@ -1,0 +1,78 @@
+/// generate the utility classes
+///
+/// @param $className {string} name of the generated class
+/// @param $propertyToGenerate {string} name of the css property to generate
+/// @param $abbrev {string} abbreviation of the property css
+/// @param $propertyValues {map} list of values for the css property
+/// @param $prefixClassName {string} prefix of the generated class
+/// @param $multiple {boolean} generate the corresponding secondary properties (ex: margin-top, margin-right...)
+@mixin generate-classes ($className, $propertyToGenerate, $abbrev, $propertyValues, $prefixClassName: null, $multiple: false) {
+  @if $multiple {
+    $propertyLength: str-length($propertyToGenerate);
+
+    @if str-slice($className, 1, $propertyLength) == $propertyToGenerate {
+      @include generate-classes-with-properties($className, $propertyValues, $abbrev, $prefixClassName);
+    }
+  }
+
+  @else {
+    @if $className == $propertyToGenerate {
+      @include generate-classes-with-properties($className, $propertyValues, $abbrev, $prefixClassName);
+    }
+  }
+}
+
+/// set the utility classes
+///
+/// @param $className {string} name of the generated class
+/// @param $propertyValues {map} list of values for the css property
+/// @param $abbrev {string} abbreviation of the property css
+/// @param $prefixClassName {string} prefix of the generated class
+@mixin generate-classes-with-properties ($className, $propertyValues, $abbrev, $prefixClassName: null) {
+  @each $key, $value in $propertyValues {
+    @if ($prefixClassName == null) {
+      .#{$abbrev}-#{$key} {
+        #{$className}: #{$value} !important;
+      }
+    }
+
+    @else {
+      .#{$prefixClassName}-#{$key} {
+        #{$className}: #{$value} !important;
+      }
+    }
+  }
+}
+
+/// generate the specific utility classes
+///
+/// @param $classValuesSpecific {map} list of specific classes
+@mixin generate-specific-classes ($classValuesSpecific) {
+  @each $specificName, $specificAbbrev in $classValuesSpecific {
+    @if $specificName == "horizontal" {
+      @include generate-specific-classes-with-properties($specificAbbrev, "left", "right");
+    }
+
+    @else if $specificName == "vertical" {
+      @include generate-specific-classes-with-properties($specificAbbrev, "top", "bottom");
+    }
+  }
+}
+
+/// set the specific utility classes
+///
+/// @param $classname {string} name of the generated class
+/// @param $propertyOne value of the 1st property css
+/// @param $propertyTwo value of the 2nd property css
+@mixin generate-specific-classes-with-properties ($classname, $propertyOne, $propertyTwo) {
+  @each $propertyName, $abbrev in $properties {
+    @if $propertyName == "margin" or $propertyName == "padding" {
+      @each $key, $value in $spacers {
+        .#{$abbrev}#{$classname}-#{$key} {
+          #{$propertyName}-#{$propertyOne}: #{$value} !important;
+          #{$propertyName}-#{$propertyTwo}: #{$value} !important;
+        }
+      }
+    }
+  }
+}

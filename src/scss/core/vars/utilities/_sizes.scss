@@ -1,0 +1,30 @@
+// sizes
+//
+// the units of measure as a percentage
+//
+$sizes: () !default;
+$sizes: map-merge(
+  (
+    auto:     auto,
+    16:       16.666667%,
+    25:       25%,
+    33:       33.33333%,
+    50:       50%,
+    66:       66.66666%,
+    75:       75%,
+    91:       91.666667%,
+    100:      100%,
+  ),
+  $sizes
+);
+
+// the viewport additional helpers
+//
+$mw-100:          100% !default;
+$mh-100:          100% !default;
+
+$min-vw-100:      100vw !default;
+$min-vh-100:      100vh !default;
+
+$vw-100:          100vw !default;
+$vh-100:          100vh !default;

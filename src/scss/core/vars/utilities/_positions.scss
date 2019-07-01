@@ -1,0 +1,23 @@
+// position
+//
+$positions: () !default;
+$positions: map-merge(
+  (
+    "s":      static,
+    "r":      relative,
+    "a":      absolute,
+    "f":      fixed
+  ),
+  $positions
+);
+
+// position fixed
+//
+$positionFixed: () !default;
+$positionFixed: map-merge(
+  (
+    "top":        top,
+    "bottom":     bottom
+  ),
+  $positionFixed
+);

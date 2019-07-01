@@ -1,0 +1,25 @@
+// breakpoints
+//
+$gridBreakpoints: () !default;
+$gridBreakpoints: map-merge(
+  (
+    "xs":       0,
+    "sm":       576px,
+    "md":       768px,
+    "lg":       992px,
+    "xl":       1200px
+  ),
+  $gridBreakpoints
+);
+
+// customs breakpoints ​
+//
+$customBreakpoints: () !default;
+$customBreakpoints: map-merge(
+  (
+    "custom-500":       500px,
+    "custom-600":       600px,
+    "custom-700":       700px
+  ),
+  $customBreakpoints
+);

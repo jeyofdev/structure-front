@@ -1,11 +1,9 @@
 // generate the utility classes for Border properties
 //
 @each $propertyName, $abbrev in $properties {
-  @if $propertyName == "border" or
-    $propertyName == "border-top" or
-    $propertyName == "border-right" or
-    $propertyName == "border-bottom" or
-    $propertyName == "border-left" {
+  $propertyLength: str-length("border");
+
+  @if str-slice($propertyName, 1, $propertyLength) == "border" {
     @each $key, $value in $borders {
       @if $key == "none" {
         .#{$abbrev}-#{$key} {
@@ -25,28 +23,18 @@
             #{$propertyName}-#{$key}: #{$hex} !important;
           }
         }
+
+        @each $colorTheme, $hex in $colorsThemes {
+          .#{$abbrev}-#{$colorTheme} {
+            #{$propertyName}-#{$key}: #{$hex} !important;
+          }
+        }
       }
 
       @else {
         .#{$abbrev}-#{$key} {
           #{$propertyName}-#{$key}: #{$value} !important;
         }
-      }
-    }
-  }
-}
-
-// generate the utility classes for Border-radius properties
-//
-@each $propertyName, $abbrev in $properties {
-  @if $propertyName == "border-radius" or
-    $propertyName == "border-radius-top" or
-    $propertyName == "border-radius-right" or
-    $propertyName == "border-radius-bottom" or
-    $propertyName == "border-radius-left" {
-    @each $key, $value in $rounded {
-      .#{$abbrev}-#{$key} {
-        #{$propertyName}: #{$value} !important;
       }
     }
   }

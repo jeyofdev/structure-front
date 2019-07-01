@@ -1,0 +1,11 @@
+// visibility
+//
+$visibilities: () !default;
+$visibilities: map-merge(
+  (
+    "visible":      visible,
+    "hidden":       hidden,
+    "collapse":     collapse
+  ),
+  $visibilities
+);

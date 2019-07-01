@@ -1,0 +1,11 @@
+// float
+//
+$floats: () !default;
+$floats: map-merge(
+  (
+    "none":       none,
+    "left":       left,
+    "right":      right
+  ),
+  $floats
+);

@@ -1,0 +1,36 @@
+/// set the classes for position fixed
+///
+@mixin generate-classes-position-fixed ($className, $propertyToGenerate, $propertyValues, $prefixClassName) {
+  @if $className == $propertyToGenerate {
+    @each $key, $value in $propertyValues {
+      @if $key == "top" {
+        @include position-fixed($prefixClassName, "top", true);
+      }
+
+      @else if $key == "bottom" {
+        @include position-fixed($prefixClassName, "bottom", false, true);
+      }
+    }
+  }
+}
+
+/// set the position in a fixed position top or bottom
+///
+/// @param $className {string} name of the generated class
+/// @param $top {boolean} enable top property
+/// @param $bottom {boolean} enable bottom property
+@mixin position-fixed ($prefixClassName, $className, $top: false, $bottom: false) {
+  .#{$prefixClassName}-#{$className} {
+    position: fixed;
+    right: 0;
+    left: 0;
+
+    @if $top {
+      top: 0;
+    }
+
+    @if $bottom {
+      bottom: 0;
+    }
+  }
+}

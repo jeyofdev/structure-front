@@ -1,27 +1,11 @@
 // generate the utility classes for property Position
 //
 @each $propertyName, $abbrev in $properties {
-  @if $propertyName == "position" {
-    @each $key, $value in $positions {
-      .#{$abbrev}-#{$key} {
-        #{$propertyName}: #{$value} !important;
-      }
-    }
-  }
+  @include generate-classes($propertyName, "position", $abbrev, $positions);
 }
 
 // generate the utility classes for the fixed position top or bottom
 //
 @each $propertyName, $abbrev in $properties {
-  @if $propertyName == "position" {
-    @each $key, $value in $positionFixed {
-      @if $key == "top" {
-        @include positionFixed("top", true);
-      }
-
-      @else if $key == "bottom" {
-        @include positionFixed("bottom", false, true);
-      }
-    }
-  }
+  @include generate-classes-position-fixed($propertyName, "position", $positionFixed, "fixed");
 }

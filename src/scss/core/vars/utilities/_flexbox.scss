@@ -1,0 +1,117 @@
+// flexbox
+//
+// flex-direction
+//
+$flexDirections: () !default;
+$flexDirections: map-merge(
+  (
+    "row":                  row,
+    "row-reverse":          row-reverse,
+    "column":               column,
+    "column-reverse":       column-reverse
+  ),
+  $flexDirections
+);
+
+// flex-wrap
+//
+$flexWraps: () !default;
+$flexWraps: map-merge(
+  (
+    "nowrap":               nowrap,
+    "wrap":                 wrap,
+    "wrap-reverse":         wrap-reverse
+  ),
+  $flexWraps
+);
+
+// justify-content
+//
+$justifyContent: () !default;
+$justifyContent: map-merge(
+  (
+    "start":                flex-start,
+    "end":                  flex-end,
+    "center":               center,
+    "space-between":        space-between,
+    "space-around":         space-around,
+    "space-evenly":         space-evenly
+  ),
+  $justifyContent
+);
+
+// align-items
+//
+$alignItems: () !default;
+$alignItems: map-merge(
+  (
+    "start":           flex-start,
+    "end":             flex-end,
+    "center":          center,
+    "stretch":         stretch,
+    "baseline":        baseline
+  ),
+  $alignItems
+);
+
+// align-content
+//
+$alignContent: () !default;
+$alignContent: map-merge(
+  (
+    "start":              flex-start,
+    "end":                flex-end,
+    "center":             center,
+    "stretch":            stretch,
+    "space-between":      space-between,
+    "space-around":       space-around,
+  ),
+  $alignContent
+);
+
+// align-self
+//
+$alignSelf: () !default;
+$alignSelf: map-merge(
+  (
+    "auto":            auto,
+    "start":           flex-start,
+    "end":             flex-end,
+    "center":          center,
+    "stretch":         stretch,
+    "baseline":        baseline
+  ),
+  $alignSelf
+);
+
+// flex-grow
+//
+$flexGrow: () !default;
+$flexGrow: map-merge(
+  (
+    0:    0,
+    1:    1
+  ),
+  $flexGrow
+);
+
+// flex-shrink
+//
+$flexShrink: () !default;
+$flexShrink: map-merge(
+  (
+    0:    0,
+    1:    1
+  ),
+  $flexShrink
+);
+
+// flex
+//
+$flex: () !default;
+$flex: map-merge(
+  (
+    "fill":    1 1 auto !important,
+  ),
+  $flex
+);

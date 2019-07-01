@@ -1,0 +1,16 @@
+// border
+//
+$border-default:        1px solid $black !default;
+$border-width:          1px !default;
+$border-color:          $gray-300 !default;
+
+$borders: () !default;
+$borders: map-merge(
+  (
+    "none":         none,
+    "default":      $border-default,
+    "width":        $border-width,
+    "color":        $border-color,
+  ),
+  $borders
+);

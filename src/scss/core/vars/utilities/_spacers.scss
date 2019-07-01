@@ -1,0 +1,22 @@
+// spacing
+//
+$spacer-base:     1rem !default;
+$spacer-025:      ($spacer-base * .25) !default;
+$spacer-05:       ($spacer-base * .5) !default;
+$spacer-1:        $spacer-base !default;
+$spacer-15:       ($spacer-base * 1.5) !default;
+$spacer-3:        ($spacer-base * 3) !default;
+
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    "auto":    auto,
+    0:         0,
+    1:         $spacer-025,
+    2:         $spacer-05,
+    3:         $spacer-1,
+    4:         $spacer-15,
+    5:         $spacer-3
+  ),
+  $spacers
+);

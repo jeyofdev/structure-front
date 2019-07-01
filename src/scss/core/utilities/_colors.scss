@@ -1,45 +1,22 @@
 // generate the utility classes for properties Color & Background-color
 //
 @each $propertyName, $abbrev in $properties {
-  // for the background-color property
+  // background-color
   //
-  @if $propertyName == "background-color" {
-    @each $key, $value in $colors {
-      .#{$abbrev}-#{$key} {
-        #{$propertyName}: #{$value} !important;
-      }
-    }
+  @include generate-classes($propertyName, "background-color", $abbrev, $colors);
+  @include generate-classes($propertyName, "background-color", $abbrev, $grays);
+  @include generate-classes($propertyName, "background-color", $abbrev, $colorsThemes);
 
-    @each $key, $value in $grays {
-      .#{$abbrev}-#{$key} {
-        #{$propertyName}: #{$value} !important;
-      }
-    }
-  }
+  // color
+  //
+  @include generate-classes($propertyName, "color", $abbrev, $colors);
+  @include generate-classes($propertyName, "color", $abbrev, $grays);
+  @include generate-classes($propertyName, "color", $abbrev, $colorsThemes);
+  @include generate-classes($propertyName, "color", $abbrev, $textColors);
 
-  // for the color property
+  // reset color
   //
   @if $propertyName == "color" {
-    @each $key, $value in $colors {
-      .#{$abbrev}-#{$key} {
-        #{$propertyName}: #{$value} !important;
-      }
-    }
-
-    @each $key, $value in $grays {
-      .#{$abbrev}-#{$key} {
-        #{$propertyName}: #{$value} !important;
-      }
-    }
-
-    // with contextual colors
-    @each $key, $value in $textColors {
-      .text-#{$key} {
-        #{$propertyName}: #{$value} !important;
-      }
-    }
-
-    // reset color
     .text-reset {
       #{$propertyName}: inherit !important;
     }

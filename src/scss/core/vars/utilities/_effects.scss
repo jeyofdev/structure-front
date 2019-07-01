@@ -1,0 +1,38 @@
+// box-shadow
+//
+$box-shadow:          0 .5rem 1rem rgba($black, .15) !default;
+$box-shadow-sm:       0 .125rem .25rem rgba($black, .075) !default;
+$box-shadow-lg:       0 1rem 3rem rgba($black, .175) !default;
+
+$boxShadows: () !default;
+$boxShadows: map-merge(
+  (
+    "none":        none,
+    "default":     $box-shadow,
+    "sm":          $box-shadow-sm,
+    "lg":          $box-shadow-lg
+  ),
+  $boxShadows
+);
+
+// border-radius
+//
+$border-radius-base:       .25rem !default;
+$border-radius-lg:         .3rem !default;
+$border-radius-sm:         .2rem !default;
+
+$rounded-circle:           100% !default;
+$rounded-pill:             50rem !default;
+
+$rounded: () !default;
+$rounded: map-merge(
+  (
+    "default":        $border-radius-base,
+    "none":           0,
+    "lg":             $border-radius-lg,
+    "sm":             $border-radius-sm,
+    "circle":         $rounded-circle,
+    "pill":           $rounded-pill
+  ),
+  $rounded
+);

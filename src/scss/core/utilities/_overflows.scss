@@ -1,11 +1,5 @@
 // generate the utility classes for property Overflow
 //
 @each $propertyName, $abbrev in $properties {
-  @if $propertyName == "overflow" {
-    @each $key, $value in $overflows {
-      .#{$abbrev}-#{$key} {
-        #{$propertyName}: #{$value} !important;
-      }
-    }
-  }
+  @include generate-classes($propertyName, "overflow", $abbrev, $overflows);
 }

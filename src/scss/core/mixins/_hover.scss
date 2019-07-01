@@ -1,4 +1,4 @@
-/// set the hover of an element
+/// set the hover
 ///
 @mixin hover {
   &:hover {
@@ -6,7 +6,15 @@
   }
 }
 
-/// set the hover and focus of an element
+/// set the focus
+///
+@mixin focus {
+  &:focus {
+    @content;
+  }
+}
+
+/// set the hover and focus
 ///
 @mixin hover-focus {
   &:hover,
@@ -14,3 +22,14 @@
     @content;
   }
 }
+
+/// set the hover, focus and active
+///
+@mixin hover-focus {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}
+

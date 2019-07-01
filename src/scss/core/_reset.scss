@@ -16,7 +16,7 @@
 
 html {
   font-family: sans-serif; // 2
-  line-height: 1.15; // 1
+  line-height: 1.15; // 3
   -webkit-text-size-adjust: 100%; // 4
   -webkit-tap-highlight-color: rgba($black, 0); // 5
 }
@@ -76,8 +76,6 @@ hr {
 }
 
 // typography
-//
-// remove top margins from headings
 //
 h1,
 h2,
@@ -342,9 +340,6 @@ input[type="checkbox"] {
 
 // remove the default appearance of temporal inputs to avoid a Mobile Safari
 // bug where setting a custom line-height prevents text from being vertically centered within the input
-//
-// see https://bugs.webkit.org/show_bug.cgi?id=139848
-// and https://github.com/twbs/bootstrap/issues/11266
 //
 input[type="date"],
 input[type="time"],

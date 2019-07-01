@@ -1,0 +1,21 @@
+// table
+//
+$table-width:                 100% !default;
+$table-margin:                $spacer-base;
+$table-color:                 $body-color !default;
+$table-bg:                    null !default;
+
+$table-border-width:          $border-width !default;
+$table-border-color:          $border-color !default;
+
+$table-accent-bg:             $black-50;
+$table-hover-color:           $table-color !default;
+$table-hover-bg:              rgba($black, .25) !default;
+
+$table-striped-order:         odd !default;
+
+// cells
+//
+$table-cell-padding:          .75rem !default;
+$table-cell-padding-sm:       .3rem !default;
+$table-cell-valign:           top !default;

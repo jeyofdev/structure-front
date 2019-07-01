@@ -1,11 +1,5 @@
 // generate the utility classes for property Display
 //
 @each $propertyName, $abbrev in $properties {
-  @if $propertyName == "display" {
-    @each $key, $value in $displays {
-      .#{$abbrev}-#{$key} {
-        #{$propertyName}: #{$value} !important;
-      }
-    }
-  }
+  @include generate-classes($propertyName, "display", $abbrev, $displays);
 }

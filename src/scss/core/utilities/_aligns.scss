@@ -1,11 +1,6 @@
 // generate the utility classes for property Vertical-align
 //
 @each $propertyName, $abbrev in $properties {
-  @if $propertyName == "vertical-align" {
-    @each $key, $value in $aligns {
-      .#{$abbrev}-#{$key} {
-        #{$propertyName}: #{$value} !important;
-      }
-    }
-  }
+  @include generate-classes($propertyName, "vertical-align", $abbrev, $aligns);
+  @include generate-classes($propertyName, "vertical-align", $abbrev, $percentagesPerTens);
 }

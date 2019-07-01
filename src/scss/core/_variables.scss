@@ -1,27 +1,40 @@
 // variables
 //
+// global
+//
 @import "vars/options";
-@import "vars/breakpoints";
-@import "vars/container";
-@import "vars/grid";
 @import "vars/properties";
-@import "vars/colors";
-@import "vars/body";
-@import "vars/positions";
-@import "vars/displays";
-@import "vars/flexbox";
-@import "vars/floats";
-@import "vars/aligns";
-@import "vars/sizes";
-@import "vars/spacers";
-@import "vars/borders";
-@import "vars/shadows";
-@import "vars/overflows";
-@import "vars/visibilities";
-@import "vars/text";
-@import "vars/lists";
-@import "vars/hr";
-@import "vars/tables";
-@import "vars/images";
-@import "vars/forms";
-@import "vars/buttons";
+@import "vars/percentages";
+
+// layout
+//
+@import "vars/layout/breakpoints";
+@import "vars/layout/container";
+@import "vars/layout/grid";
+
+// utilities
+//
+@import "vars/utilities/colors";
+@import "vars/utilities/positions";
+@import "vars/utilities/displays";
+@import "vars/utilities/flexbox";
+@import "vars/utilities/floats";
+@import "vars/utilities/overflows";
+@import "vars/utilities/visibilities";
+@import "vars/utilities/aligns";
+@import "vars/utilities/sizes";
+@import "vars/utilities/spacers";
+@import "vars/utilities/borders";
+@import "vars/utilities/effects";
+@import "vars/utilities/fonts";
+
+// content
+//
+@import "vars/content/text";
+@import "vars/content/lists";
+@import "vars/content/images";
+@import "vars/content/tables";
+@import "vars/content/hr";
+@import "vars/content/forms";
+@import "vars/content/buttons";
+@import "vars/content/links";

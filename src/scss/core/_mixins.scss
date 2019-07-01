@@ -1,15 +1,26 @@
 // mixins
 //
-@import "mixins/breakpoints";
-@import "mixins/container";
-@import "mixins/grid";
-@import "mixins/positions";
-@import "mixins/flexbox";
-@import "mixins/text";
-@import "mixins/list";
+// global
+//
 @import "mixins/hover";
-@import "mixins/border-radius";
-@import "mixins/box-shadow";
-@import "mixins/tables";
-@import "mixins/forms";
-@import "mixins/buttons";
+@import "mixins/effects";
+
+// layout
+//
+@import "mixins/layout/breakpoints";
+@import "mixins/layout/container";
+@import "mixins/layout/grid";
+
+// utilities
+//
+@import "mixins/utilities/utilities";
+@import "mixins/utilities/positions";
+@import "mixins/utilities/flexbox";
+@import "mixins/utilities/text";
+
+// content
+//
+@import "mixins/content/list";
+@import "mixins/content/tables";
+@import "mixins/content/forms";
+@import "mixins/content/buttons";

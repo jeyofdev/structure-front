@@ -1,0 +1,18 @@
+// containers
+//
+// width of the container padding
+//
+$grid-gutter-width:       30px !default;
+
+// widths for each breakpoints
+//
+$containerWidths: () !default;
+$containerWidths: map-merge(
+  (
+    sm:     540px,
+    md:     720px,
+    lg:     960px,
+    xl:     1140px
+  ),
+  $containerWidths
+);

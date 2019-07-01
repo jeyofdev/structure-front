@@ -1,0 +1,26 @@
+// generate the utility classes for properties Font & Text
+//
+@each $propertyName, $abbrev in $properties {
+  // font-weight
+  @include generate-classes($propertyName, "font-weight", $abbrev, $fontWeight);
+
+  // font-style
+  @include generate-classes($propertyName, "font-style", $abbrev, $fontStyles);
+
+  // white-space
+  @include generate-classes($propertyName, "white-space", $abbrev, $whiteSpaces, "text");
+
+  // text-align
+  @include generate-classes($propertyName, "text-align", $abbrev, $textAligns, "align");
+
+  // text-transform
+  @include generate-classes($propertyName, "text-transform", $abbrev, $textTransform, "text");
+
+  // text-decoration
+  @include generate-classes($propertyName, "text-decoration", $abbrev, $textDecorations);
+
+  // word break
+  @if $propertyName == "text-decoration" {
+    @include text-break();
+  }
+}

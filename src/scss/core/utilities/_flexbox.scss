@@ -4,63 +4,63 @@
   // flex-direction
   @if $propertyName == "flex-direction" {
     @each $key, $value in $flexDirections {
-      @include flexProperty("flex-direction", $value, $key);
+      @include flex-property("flex-direction", $value, $key);
     }
   }
 
   // flex-wrap
   @if $propertyName == "flex-wrap" {
     @each $key, $value in $flexWraps {
-      @include flexProperty("flex-wrap", $value, $key, "flex");
+      @include flex-property("flex-wrap", $value, $key, "flex");
     }
   }
 
   // justify-content
   @if $propertyName == "justify-content" {
     @each $key, $value in $justifyContent {
-      @include flexProperty("justify-content", $value, $key, "flex");
+      @include flex-property("justify-content", $value, $key, "flex");
     }
   }
 
   // align-items
   @if $propertyName == "justify-content" {
     @each $key, $value in $alignItems {
-      @include flexProperty("align-items", $value, $key, "flex");
+      @include flex-property("align-items", $value, $key, "flex");
     }
   }
 
   // align-content
   @if $propertyName == "align-content" {
     @each $key, $value in $alignContent {
-      @include flexProperty("align-content", $value, $key, "flex");
+      @include flex-property("align-content", $value, $key, "flex");
     }
   }
 
   // align-self
   @if $propertyName == "align-self" {
     @each $key, $value in $alignSelf {
-      @include flexProperty("align-self", $value, $key, "flex");
+      @include flex-property("align-self", $value, $key, "flex");
     }
   }
 
   // flex-grow
   @if $propertyName == "flex-grow" {
     @each $key, $value in $flexGrow {
-      @include flexProperty("flex-grow", $value, $abbrev, "flex");
+      @include flex-property("flex-grow", $value, $abbrev, "flex");
     }
   }
 
   // flex-grow
   @if $propertyName == "flex-shrink" {
     @each $key, $value in $flexShrink {
-      @include flexProperty("flex-shrink", $value, $abbrev, "flex");
+      @include flex-property("flex-shrink", $value, $abbrev, "flex");
     }
   }
 
   // flex
   @if $propertyName == "flex" {
     @each $key, $value in $flex {
-      @include flexProperty("flex", $value, $propertyName, "flex", "fill");
+      @include flex-property("flex", $value, $propertyName, "flex", "fill");
     }
   }
 }

@@ -1,13 +1,14 @@
 // generate the utility classes for properties Width and Height
 //
 @each $propertyName, $abbrev in $properties {
-  @if ($propertyName == "width") or ($propertyName == "height") {
-    @each $key, $value in $sizes {
-      .#{$abbrev}-#{$key} {
-        #{$propertyName}: #{$value} !important;
-      }
-    }
+  @include generate-classes($propertyName, "width", $abbrev, $sizes);
+  @include generate-classes($propertyName, "height", $abbrev, $sizes);
 
+  //
+  @include generate-classes($propertyName, "width", $abbrev, $percentagesPerTens);
+  @include generate-classes($propertyName, "height", $abbrev, $percentagesPerTens);
+
+  @if ($propertyName == "width") or ($propertyName == "height") {
     .#{$abbrev}-vw-100 {
       #{$propertyName}: 100vw !important;
     }
@@ -19,7 +20,6 @@
 }
 
 // generate the utility classes for properties Max-width and Max-Height
-//
 @each $propertyName, $abbrev in $properties {
   @if ($propertyName == "max-width") or ($propertyName == "max-height") {
     .#{$abbrev}-100 {

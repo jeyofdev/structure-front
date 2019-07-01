@@ -1,0 +1,11 @@
+// generate the utility classes for Box-shadow property
+//
+@each $propertyName, $abbrev in $properties {
+  @include generate-classes($propertyName, "box-shadow", $abbrev, $boxShadows);
+}
+
+// generate the utility classes for Border-radius properties
+//
+@each $propertyName, $abbrev in $properties {
+  @include generate-classes($propertyName, "border-radius", $abbrev, $rounded, null, true);
+}
