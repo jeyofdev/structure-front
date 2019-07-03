@@ -5,9 +5,9 @@
 
   @if str-slice($propertyName, 1, $propertyLength) == "border" {
     @each $key, $value in $borders {
-      @if $key == "none" {
+      @if ($key == "none") or ($key == "default") {
         .#{$abbrev}-#{$key} {
-          #{$propertyName}: #{$value} !important;
+          #{$propertyName}: #{$value};
         }
       }
 
