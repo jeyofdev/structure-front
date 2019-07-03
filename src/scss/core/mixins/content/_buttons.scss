@@ -12,3 +12,18 @@
 
   @include border-radius($border-radius, 0);
 }
+
+/// set the properties background-color and border-color of the buttons
+///
+/// @param $propertiesValues {map} lists of color values
+@mixin button-color ($propertiesValues) {
+  @each $key, $value in $propertiesValues {
+    .btn-#{$key} {
+      background-color: #{$value} !important;
+    }
+
+    .btn-border-#{$key} {
+      border-color: #{$value} !important;
+    }
+  }
+}

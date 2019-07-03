@@ -99,22 +99,6 @@ input[type="button"] {
 
 // generate the class for properties Background-color & border-color of the buttons 
 //
-@each $key, $value in $colors {
-  .btn-#{$key} {
-    background-color: #{$value} !important;
-  }
-
-  .btn-border-#{$key} {
-    border-color: #{$value} !important;
-  }
-}
-
-@each $key, $value in $grays {
-  .btn-#{$key} {
-    background-color: #{$value} !important;
-  }
-
-  .btn-border-#{$key} {
-    border-color: #{$value} !important;
-  }
-}
+@include button-color($colors);
+@include button-color($grays);
+@include button-color($colorsThemes);
