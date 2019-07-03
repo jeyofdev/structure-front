@@ -111,7 +111,7 @@ $flexShrink: map-merge(
 $flex: () !default;
 $flex: map-merge(
   (
-    "fill":    1 1 auto !important,
+    "fill":    1 1 auto,
   ),
   $flex
 );
