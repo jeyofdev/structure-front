@@ -14,7 +14,7 @@
 
   @else if ($propertyName == "flex-grow") or ($propertyName == "flex-shrink") {
     @if $prefix != null {
-      $className: #{$prefix}-#{$className};
+      $className: #{$prefix}-#{$className}-#{$propertyValue};
     }
   }
 
