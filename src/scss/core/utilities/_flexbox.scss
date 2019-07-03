@@ -4,7 +4,7 @@
   // flex-direction
   @if $propertyName == "flex-direction" {
     @each $key, $value in $flexDirections {
-      @include flex-property("flex-direction", $value, $key);
+      @include flex-property("flex-direction", $value, $key, "flex");
     }
   }
 
