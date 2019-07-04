@@ -92,7 +92,7 @@
   $num: $size / $columns;
 
   flex: 0 0 percentage($num);
-  max-width: calc(#{percentage($num)} - #{$paddingColumns});
+  max-width: #{percentage($num)};
 }
 
 /// set the css properties of the offset grid columns
