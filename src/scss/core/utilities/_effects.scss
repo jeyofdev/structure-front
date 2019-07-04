@@ -8,4 +8,12 @@
 //
 @each $propertyName, $abbrev in $properties {
   @include generate-classes($propertyName, "border-radius", $abbrev, $rounded, null, true);
+  @include generate-classes($propertyName, "border-top-left-radius", $abbrev, $rounded, null, true);
+  @include generate-classes($propertyName, "border-top-right-radius", $abbrev, $rounded, null, true);
+  @include generate-classes($propertyName, "border-bottom-left-radius", $abbrev, $rounded, null, true);
+  @include generate-classes($propertyName, "border-bottom-right-radius", $abbrev, $rounded, null, true);
 }
+
+// generate the generic utility classes for Border-radius properties
+//
+@include generate-specific-classes ($propertiesGenericForBorderRadius);

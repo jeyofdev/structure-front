@@ -1,9 +1,11 @@
 // generate the utility classes for Border properties
 //
 @each $propertyName, $abbrev in $properties {
-  $propertyLength: str-length("border");
-
-  @if str-slice($propertyName, 1, $propertyLength) == "border" {
+  @if $propertyName == "border" or
+    $propertyName == "border-top" or
+    $propertyName == "border-right" or
+    $propertyName == "border-bottom" or
+    $propertyName == "border-left" {
     @each $key, $value in $borders {
       @if ($key == "none") or ($key == "default") {
         .#{$abbrev}-#{$key} {

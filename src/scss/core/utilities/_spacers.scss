@@ -7,6 +7,4 @@
 
 // generate the generic utility classes for properties Margin and Padding 
 //
-@each $globalName, $globalAbbrev in $propertiesGeneric {
-  @include generate-specific-classes ($propertiesGeneric);
-}
+@include generate-specific-classes ($propertiesGeneric);

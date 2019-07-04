@@ -56,6 +56,22 @@
     @else if $specificName == "vertical" {
       @include generate-specific-classes-with-properties($specificAbbrev, "top", "bottom");
     }
+
+    @else if $specificName == "border-radius-top" {
+      @include generate-specific-classes-for-Border-radius-with-properties($specificAbbrev, "border-top-left-radius", "border-top-right-radius");
+    }
+
+    @else if $specificName == "border-radius-right" {
+      @include generate-specific-classes-for-Border-radius-with-properties($specificAbbrev, "border-top-right-radius", "border-bottom-right-radius");
+    }
+
+    @else if $specificName == "border-radius-bottom" {
+      @include generate-specific-classes-for-Border-radius-with-properties($specificAbbrev, "border-bottom-left-radius", "border-bottom-right-radius");
+    }
+
+    @else if $specificName == "border-radius-left" {
+      @include generate-specific-classes-for-Border-radius-with-properties($specificAbbrev, "border-top-left-radius", "border-bottom-left-radius");
+    }
   }
 }
 
@@ -71,6 +87,24 @@
         .#{$abbrev}#{$classname}-#{$key} {
           #{$propertyName}-#{$propertyOne}: #{$value} !important;
           #{$propertyName}-#{$propertyTwo}: #{$value} !important;
+        }
+      }
+    }
+  }
+}
+
+/// set the specific utility classes for properties Border-radius
+///
+/// @param $classname {string} name of the generated class
+/// @param $propertyOne value of the 1st property css
+/// @param $propertyTwo value of the 2nd property css
+@mixin generate-specific-classes-for-Border-radius-with-properties ($classname, $propertyOne, $propertyTwo) {
+  @each $propertyName, $abbrev in $properties {
+    @if $propertyName == "border-radius" {
+      @each $key, $value in $rounded {
+        .#{$abbrev}-#{$classname}-#{$key} {
+          #{$propertyOne}: #{$value} !important;
+          #{$propertyTwo}: #{$value} !important;
         }
       }
     }
